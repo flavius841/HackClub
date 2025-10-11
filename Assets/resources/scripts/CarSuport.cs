@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class car : MonoBehaviour
+public class CarSuport : MonoBehaviour
 {
     [SerializeField] float ypos, xpos;
     [SerializeField] Transform target1;
