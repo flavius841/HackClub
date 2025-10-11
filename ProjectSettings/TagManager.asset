@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wheel1
   - wheel2
+  - player
   layers:
   - Default
   - TransparentFX

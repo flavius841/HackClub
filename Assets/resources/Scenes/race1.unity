@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 312765001}
   - component: {fileID: 312765002}
-  - component: {fileID: 312765003}
   m_Layer: 0
   m_Name: carbody
   m_TagString: Untagged
@@ -210,22 +209,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &312765003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312765000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8f876bc06d5c9b7be0c7e7f3a792f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::car
-  ypos: 2.25
-  xpos: -0.66
-  target1: {fileID: 495725494}
-  target2: {fileID: 1606628956}
 --- !u!1 &495725489
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,8 +220,8 @@ GameObject:
   - component: {fileID: 495725494}
   - component: {fileID: 495725493}
   - component: {fileID: 495725492}
-  - component: {fileID: 495725490}
   - component: {fileID: 495725491}
+  - component: {fileID: 495725495}
   m_Layer: 0
   m_Name: FrontWheel
   m_TagString: wheel1
@@ -246,33 +229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &495725490
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495725489}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &495725491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,10 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4acb01c16a19cd9a62ded0443609c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::weels
-  ypos: 0
-  xpos: 0
-  indicator: {fileID: 1606628956}
-  worldOffset: {x: 0, y: 0, z: 0}
+  target: {fileID: 1606628956}
 --- !u!58 &495725492
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -398,6 +351,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &495725495
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495725489}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &756214289
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +488,7 @@ GameObject:
   - component: {fileID: 804834641}
   - component: {fileID: 804834640}
   - component: {fileID: 804834643}
+  - component: {fileID: 804834644}
   m_Layer: 0
   m_Name: Closed Sprite Shape
   m_TagString: Untagged
@@ -1444,6 +1425,18 @@ MonoBehaviour:
   MaxSpeed: 40
   Acc: 20
   LowestSpeed: -20
+--- !u!114 &804834644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804834636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b645ea68b3bb69e1a8873604948cd675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugScript
 --- !u!1 &1393678513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1637,7 @@ DistanceJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 495725490}
+  m_ConnectedRigidBody: {fileID: 495725495}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
@@ -1800,10 +1793,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1733800721}
   - component: {fileID: 1733800720}
-  - component: {fileID: 1733800722}
+  - component: {fileID: 1733800723}
+  - component: {fileID: 1733800724}
   m_Layer: 0
   m_Name: CarSuport
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1882,7 +1876,44 @@ Transform:
   - {fileID: 312765001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733800722
+--- !u!70 &1733800723
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733800718}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.5632148, y: 17.7945}
+  m_Size: {x: 1.5435755, y: 10.008458}
+  m_Direction: 1
+--- !u!114 &1733800724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1894,7 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785e84a43518f6e2f973c736ebbb5455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarSuport
-  ypos: 0.16
+  ypos: 0
   xpos: 0
   target1: {fileID: 495725494}
   target2: {fileID: 1606628956}

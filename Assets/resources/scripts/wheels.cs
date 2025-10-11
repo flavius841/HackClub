@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class weels : MonoBehaviour
 {
+    //[SerializeField] Transform indicator;
+    [SerializeField] Transform target;
+   
 
-    [SerializeField] float ypos, xpos;
-    [SerializeField] Transform indicator;       
-    public Vector3 worldOffset;
+
+      
 
     void Update()
     {
         
-        
-        transform.rotation = indicator.transform.rotation;
+        transform.rotation = target.transform.rotation;
         
 
 

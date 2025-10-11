@@ -12,7 +12,7 @@ public class Controlingtheplayer : MonoBehaviour
 
     }
 
-    
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +21,8 @@ public class Controlingtheplayer : MonoBehaviour
             TouchPlayer = true;
         }
     }
+    
+   
 
     void OnTriggerExit2D(Collider2D other)
     {

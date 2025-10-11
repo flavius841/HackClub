@@ -51,6 +51,7 @@
     <Compile Include="Assets/resources/scripts/car.cs" />
     <Compile Include="Assets/resources/scripts/CarSuport.cs" />
     <Compile Include="Assets/resources/scripts/wheels.cs" />
+    <Compile Include="Assets/resources/scripts/DebugScript.cs" />
     <Compile Include="Assets/resources/scripts/controlingtheplayer.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -19,5 +19,6 @@ public class CarSuport : MonoBehaviour
         
         transform.position =  new Vector3(midPoint.x + xpos, midPoint.y + ypos, 0);
         
+
     }
 }
