@@ -53,6 +53,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/resources/scriptsStartMenu/RotateSettingsIcon.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
+    <Compile Include="Assets/resources/scriptsStartMenu/SettingsScript.cs" />
     <Compile Include="Assets/resources/scriptsRace1/DebugScript.cs" />
     <Compile Include="Assets/resources/scriptsRace1/PreventBugBack.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
