@@ -48,6 +48,7 @@
     <Analyzer Include="/home/boo/Unity/Hub/Editor/6000.2.6f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/resources/scripts/PreventBugBack.cs" />
     <Compile Include="Assets/resources/scripts/TouchGroundFrontWheel.cs" />
     <Compile Include="Assets/resources/scripts/car.cs" />
     <Compile Include="Assets/resources/scripts/RotatePlayer.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Assets/resources/scripts/DebugScript.cs" />
     <Compile Include="Assets/resources/scripts/TouchGroundBackWheel.cs" />
     <Compile Include="Assets/resources/scripts/controlingtheplayer.cs" />
+    <Compile Include="Assets/resources/scripts/PreventBugFront.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/resources/prefabs/TileVania+sprite+assets/TileVania sprite assets/README - License details.txt" />

@@ -9,6 +9,8 @@ public class RotatePlayer : MonoBehaviour
 
     public TouchGroundFrontWheel script1;
     public TouchGroundBackWheel script2;
+    public PreventBugFront script3;
+    public PreventBugBack script4;
     [SerializeField] public bool ResetRot;
     public float Rotvalue;
 
@@ -35,6 +37,11 @@ public class RotatePlayer : MonoBehaviour
         {
             rb2d.MoveRotation(Rotvalue);
             ResetRot = false;
+        }
+        
+        if (script3.Deactivate1 || script4.Deactivate2)
+        {
+            rb2d.MoveRotation(Rotvalue);
         }
 
         Rotate();
