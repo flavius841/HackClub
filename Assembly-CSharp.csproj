@@ -48,16 +48,17 @@
     <Analyzer Include="/home/boo/Unity/Hub/Editor/6000.2.6f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/resources/scripts/PreventBugBack.cs" />
-    <Compile Include="Assets/resources/scripts/TouchGroundFrontWheel.cs" />
-    <Compile Include="Assets/resources/scripts/car.cs" />
-    <Compile Include="Assets/resources/scripts/RotatePlayer.cs" />
-    <Compile Include="Assets/resources/scripts/CarSuport.cs" />
-    <Compile Include="Assets/resources/scripts/wheels.cs" />
-    <Compile Include="Assets/resources/scripts/DebugScript.cs" />
-    <Compile Include="Assets/resources/scripts/TouchGroundBackWheel.cs" />
-    <Compile Include="Assets/resources/scripts/controlingtheplayer.cs" />
-    <Compile Include="Assets/resources/scripts/PreventBugFront.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/DebugScript.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/PreventBugBack.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/RotatePlayer.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/TouchGroundFrontWheel.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/controlingtheplayer.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/wheels.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/TouchGroundBackWheel.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/CarSuport.cs" />
+    <Compile Include="Assets/resources/scriptsStartMenu/InstantiatePlayer.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/car.cs" />
+    <Compile Include="Assets/resources/scriptsRace1/PreventBugFront.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/resources/prefabs/TileVania+sprite+assets/TileVania sprite assets/README - License details.txt" />

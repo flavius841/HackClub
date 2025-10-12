@@ -21,17 +21,17 @@ public class CarSuport : MonoBehaviour
 
     void Update()
     {
-        if (!script1.Rotate1 || !script2.Rotate2 || script3.Deactivate1 || script4.Deactivate2)
-        {
-            capsuleCollider.enabled = false;
-        }
+        // if (!script1.Rotate1 || !script2.Rotate2 || script3.Deactivate1 || script4.Deactivate2)
+        // {
+        //     capsuleCollider.enabled = false;
+        // }
 
-        else
-        {
-            capsuleCollider.enabled = true;
-        }
+        // else
+        // {
+        //     capsuleCollider.enabled = true;
+        // }
 
-        capsuleCollider.offset = new Vector2(0.4f, 15.83f);
+        // capsuleCollider.offset = new Vector2(0.4f, 15.83f);
 
 
 
