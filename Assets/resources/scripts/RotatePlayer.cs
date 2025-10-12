@@ -1,11 +1,15 @@
 using UnityEngine;
 
-public class Player_Controller : MonoBehaviour
+public class RotatePlayer : MonoBehaviour
 {
-    [SerializeField] float torqueAmount;
+    //[SerializeField] float torqueAmount;
     Rigidbody2D rb2d;
-    public float rotationSpeed;
-    public bool TouchGround;
+    public float LeftRotationSpeed, RightRotationSpeed;
+    //public bool TouchGround;
+
+    public TouchGroundFrontWheel script1;
+    public TouchGroundBackWheel script2;
+
   
 
     
@@ -15,37 +19,23 @@ public class Player_Controller : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Ground")
-        {
-            TouchGround = false;
-        }
-    }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Ground")
-        {
-            TouchGround = true;
-        }
-    }
-    
+
     void  FixedUpdate()
     {
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !TouchGround)
+        if (Input.GetKey(KeyCode.LeftArrow) && script1.Rotate)
         {
             Debug.Log("Left torque applied");
             //transform.Rotate(0, 0, torqueAmount, Space.World);
-            rb2d.MoveRotation(rb2d.rotation + rotationSpeed * Time.fixedDeltaTime);
+            rb2d.MoveRotation(rb2d.rotation + LeftRotationSpeed * Time.fixedDeltaTime);
         }
 
-        else if (Input.GetKey(KeyCode.RightArrow) && !TouchGround)
+        else if (Input.GetKey(KeyCode.RightArrow) && script1.Rotate)
         {
             Debug.Log("rIGHT torque applied");
             //transform.Rotate(0, 0, -torqueAmount, Space.World);
-            rb2d.MoveRotation(rb2d.rotation - rotationSpeed * Time.fixedDeltaTime);
+            rb2d.MoveRotation(rb2d.rotation - RightRotationSpeed * Time.fixedDeltaTime);
         }
 
         foreach (Transform child in transform)
