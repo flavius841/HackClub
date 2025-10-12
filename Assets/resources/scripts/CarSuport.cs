@@ -5,9 +5,29 @@ public class CarSuport : MonoBehaviour
     [SerializeField] float ypos, xpos;
     [SerializeField] Transform target1;
     [SerializeField] Transform target2;
+    public TouchGroundFrontWheel script1;
+    public TouchGroundBackWheel script2;
+    private CapsuleCollider2D capsuleCollider;
+
+
+
+    void Start()
+    {
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+    }
+
 
     void Update()
     {
+        if (!script1.Rotate1 || !script2.Rotate2)
+        {
+            capsuleCollider.enabled = false;
+        }
+
+        else
+        {
+            capsuleCollider.enabled = true;
+        }
 
 
         Vector2 direction = target1.position - target2.position;

@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 495725492}
   - component: {fileID: 495725491}
   - component: {fileID: 495725495}
+  - component: {fileID: 495725496}
   m_Layer: 0
   m_Name: FrontWheel
   m_TagString: wheel1
@@ -378,6 +379,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &495725496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495725489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a09a6cce8d5ed999bd23d98714cb2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TouchGround
+  Rotate: 1
 --- !u!1 &662082015
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,9 +438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0ce1745fe5955f0b7bf5d29908e5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotatePlayer
-  torqueAmount: 1
-  rotationSpeed: 0
-  TouchGround: 0
+  LeftRotationSpeed: 0
+  RightRotationSpeed: 0
+  script1: {fileID: 0}
+  script2: {fileID: 0}
 --- !u!1 &756214289
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 756214289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.42037, y: 1.2859573, z: -10.1}
+  m_LocalPosition: {x: -22.179628, y: 372.28595, z: -10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -552,9 +567,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0ce1745fe5955f0b7bf5d29908e5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Controller
-  torqueAmount: 2.92
-  rotationSpeed: 100
-  TouchGround: 0
+  LeftRotationSpeed: 200
+  RightRotationSpeed: 500
+  script1: {fileID: 495725496}
+  script2: {fileID: 1606628958}
 --- !u!4 &790944599
 Transform:
   m_ObjectHideFlags: 0
@@ -564,7 +580,7 @@ Transform:
   m_GameObject: {fileID: 790944597}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.06255404, w: 0.9980416}
-  m_LocalPosition: {x: -16, y: -0, z: 0}
+  m_LocalPosition: {x: -40.6, y: 371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1651,7 +1667,7 @@ Transform:
   m_GameObject: {fileID: 1393678513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.42037, y: 1.2859573, z: -10.1}
+  m_LocalPosition: {x: -22.179628, y: 372.28595, z: -10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1747,6 +1763,7 @@ GameObject:
   - component: {fileID: 1606628953}
   - component: {fileID: 1606628952}
   - component: {fileID: 1606628957}
+  - component: {fileID: 1606628958}
   m_Layer: 0
   m_Name: BackWheel
   m_TagString: wheel2
@@ -1772,7 +1789,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 5.3302345
+  m_Distance: 5.330234
   m_MaxDistanceOnly: 0
 --- !u!50 &1606628953
 Rigidbody2D:
@@ -1946,6 +1963,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.455
+--- !u!114 &1606628958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606628951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c57bcb37efe07ea88371c6583453b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TouchGroundBackWheel
 --- !u!1 &1733800718
 GameObject:
   m_ObjectHideFlags: 0

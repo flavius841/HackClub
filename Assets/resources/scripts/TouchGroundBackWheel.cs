@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class TouchGroundBackWheel : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public bool Rotate2;
+
+    void OnTriggerExit2D(Collider2D other)
     {
-        
+        if (other.tag == "Ground")
+        {
+            Rotate2 = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.tag == "Ground")
+        {
+            Rotate2 = false;
+        }
     }
+
 }
