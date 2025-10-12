@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: d69723419db2b6c3c81f8421478f7653
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2399546477659883356
+    second: set-progress-bars-game-buttons-gui-elements_0
+  - first:
+      213: 3193750514781598642
+    second: set-progress-bars-game-buttons-gui-elements_1
+  - first:
+      213: -6415006656035623858
+    second: set-progress-bars-game-buttons-gui-elements_2
+  - first:
+      213: 2910603622787873478
+    second: set-progress-bars-game-buttons-gui-elements_3
+  - first:
+      213: -2579644454400426744
+    second: set-progress-bars-game-buttons-gui-elements_4
+  - first:
+      213: -2826786629413556307
+    second: set-progress-bars-game-buttons-gui-elements_5
+  - first:
+      213: -352161073412363329
+    second: set-progress-bars-game-buttons-gui-elements_6
+  - first:
+      213: 655833980262581604
+    second: set-progress-bars-game-buttons-gui-elements_7
+  - first:
+      213: 7871753915989786886
+    second: set-progress-bars-game-buttons-gui-elements_8
+  - first:
+      213: 8089374005944081924
+    second: set-progress-bars-game-buttons-gui-elements_9
+  - first:
+      213: -2289974365047858145
+    second: set-progress-bars-game-buttons-gui-elements_10
+  - first:
+      213: -4039557256880218326
+    second: set-progress-bars-game-buttons-gui-elements_11
+  - first:
+      213: -4110753183915412694
+    second: set-progress-bars-game-buttons-gui-elements_12
+  - first:
+      213: 6783254709928174261
+    second: set-progress-bars-game-buttons-gui-elements_13
+  - first:
+      213: -5577222757306147490
+    second: set-progress-bars-game-buttons-gui-elements_14
+  - first:
+      213: -1352381791143128899
+    second: set-progress-bars-game-buttons-gui-elements_15
+  - first:
+      213: 3199551500359761518
+    second: set-progress-bars-game-buttons-gui-elements_16
+  - first:
+      213: 5901258912478076906
+    second: set-progress-bars-game-buttons-gui-elements_17
+  - first:
+      213: 8070550925886114639
+    second: set-progress-bars-game-buttons-gui-elements_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 779
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5705fedec6ec4120800000000000000
+      internalID: 2399546477659883356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 779
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b337c60c2b725c20800000000000000
+      internalID: 3193750514781598642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 779
+        width: 145
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4cea3b3f6159f6a0800000000000000
+      internalID: -6415006656035623858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_3
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 780
+        width: 150
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca7c3ae29a846820800000000000000
+      internalID: 2910603622787873478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_4
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 780
+        width: 149
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80df7a84903433cd0800000000000000
+      internalID: -2579644454400426744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_5
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 779
+        width: 129
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf2bf9998c35c8d0800000000000000
+      internalID: -2826786629413556307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_6
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 779
+        width: 58
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb298b9e5fdc1bf0800000000000000
+      internalID: -352161073412363329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_7
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 779
+        width: 58
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4658e21c78df91900800000000000000
+      internalID: 655833980262581604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_8
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 779
+        width: 145
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6018cd1fa761e3d60800000000000000
+      internalID: 7871753915989786886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 549
+        width: 528
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e539f8cca334070800000000000000
+      internalID: 8089374005944081924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_10
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 317
+        width: 376
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c5292a2706830e0800000000000000
+      internalID: -2289974365047858145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_11
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 549
+        width: 527
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f9dcdc31c90f7c0800000000000000
+      internalID: -4039557256880218326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_12
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 317
+        width: 528
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a237a6942cba3f6c0800000000000000
+      internalID: -4110753183915412694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_13
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 322
+        width: 526
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2a34e2836f22e50800000000000000
+      internalID: 6783254709928174261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_14
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 182
+        width: 1014
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dda8d9379b992b0800000000000000
+      internalID: -5577222757306147490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_15
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 80
+        width: 123
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0153a1def5b3de0800000000000000
+      internalID: -1352381791143128899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_16
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 78
+        width: 185
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ef28b3327176c20800000000000000
+      internalID: 3199551500359761518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_17
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 78
+        width: 185
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef1dd5f6bb75e150800000000000000
+      internalID: 5901258912478076906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-progress-bars-game-buttons-gui-elements_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 78
+        width: 1014
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b4427be4b500070800000000000000
+      internalID: 8070550925886114639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 68853e7465b83bc9a8f702c9b3e504a4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      set-progress-bars-game-buttons-gui-elements_0: 2399546477659883356
+      set-progress-bars-game-buttons-gui-elements_1: 3193750514781598642
+      set-progress-bars-game-buttons-gui-elements_10: -2289974365047858145
+      set-progress-bars-game-buttons-gui-elements_11: -4039557256880218326
+      set-progress-bars-game-buttons-gui-elements_12: -4110753183915412694
+      set-progress-bars-game-buttons-gui-elements_13: 6783254709928174261
+      set-progress-bars-game-buttons-gui-elements_14: -5577222757306147490
+      set-progress-bars-game-buttons-gui-elements_15: -1352381791143128899
+      set-progress-bars-game-buttons-gui-elements_16: 3199551500359761518
+      set-progress-bars-game-buttons-gui-elements_17: 5901258912478076906
+      set-progress-bars-game-buttons-gui-elements_18: 8070550925886114639
+      set-progress-bars-game-buttons-gui-elements_2: -6415006656035623858
+      set-progress-bars-game-buttons-gui-elements_3: 2910603622787873478
+      set-progress-bars-game-buttons-gui-elements_4: -2579644454400426744
+      set-progress-bars-game-buttons-gui-elements_5: -2826786629413556307
+      set-progress-bars-game-buttons-gui-elements_6: -352161073412363329
+      set-progress-bars-game-buttons-gui-elements_7: 655833980262581604
+      set-progress-bars-game-buttons-gui-elements_8: 7871753915989786886
+      set-progress-bars-game-buttons-gui-elements_9: 8089374005944081924
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
