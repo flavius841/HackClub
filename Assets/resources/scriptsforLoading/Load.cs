@@ -30,7 +30,7 @@ public class Load : MonoBehaviour
         
         if (Timer >= 9f)
         {
-            surfaceEffector.speed = 4f;
+            surfaceEffector.speed = 2f;
         }
     }
 }
