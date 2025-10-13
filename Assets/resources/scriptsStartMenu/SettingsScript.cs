@@ -9,6 +9,7 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] float Timer;
     [SerializeField] float Speed;
     [SerializeField] int Status;
+    [SerializeField] bool StatusBool;
     [SerializeField] int Open = 3;
     [SerializeField] int Close = 4;
     [SerializeField] int Opened = 2;
@@ -16,36 +17,37 @@ public class SettingsScript : MonoBehaviour
 
     void Start()
     {
+        
     }
 
     public void OpenSettingsMenu()
     {
         Menu.gameObject.SetActive(true);
         Menu.transform.position = new Vector3(Xpos, Ypos, 0);
-        Timer = 0;
-        Status = Open;
-
+        
     }
 
     public void CloseSettingsMenu()
     {
         Menu.gameObject.SetActive(false);
         Menu.transform.position = new Vector3(Xpos, Ypos, 0);
-        Timer = 0;
-        Status = Close;
 
     }
 
     public void SettingsMenu()
     {
-        if (Status == Open)
+        StatusBool = !StatusBool;
+
+        if (Status == Open && !StatusBool)
         {
-            Status = Opened;
+            Status = Close;
+            Timer = 0;
         }
 
-        if (Status == Close)
+        if (Status == Close && StatusBool)
         {
-            Status = Closed;
+            Status = Open;
+            Timer = 0;
         }
 
         
@@ -63,28 +65,39 @@ public class SettingsScript : MonoBehaviour
     
     void Update()
     {
-        if (Status == Closed)
+        if (Status == Open)
         {
             OpenSettingsMenu();
+            if (Timer <= 1.7f)
+            {
+                Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
+                Menu.transform.Rotate(0, 0, 200 * Time.deltaTime);
+            }
+            
+            
         }
 
-        if (Status == Opened)
+        if (Status == Close)
         {
-            CloseSettingsMenu();
+            if (Timer <= 1.7f)
+            {
+                Menu.transform.localScale -= Vector3.one * 3 * Time.deltaTime;
+                Menu.transform.Rotate(0, 0, -200 * Time.deltaTime);
+            }
+            else
+            {
+                CloseSettingsMenu();
+            }
+            
         }
 
         Timer = Timer + Time.deltaTime * Speed;
-        if (Timer <= 1.7f && Status == Open)
-        {
-            Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
-            Menu.transform.Rotate(0, 0, 200 * Time.deltaTime);
-        }
 
-        if (Timer <= 1.7f && Status == Close)
-        {
-            Menu.transform.localScale -= Vector3.one * 3 * Time.deltaTime;
-            Menu.transform.Rotate(0, 0, -200 * Time.deltaTime);
-        }
+        Debug.Log(Status);
+
+
+
+        
     }
 
 }
