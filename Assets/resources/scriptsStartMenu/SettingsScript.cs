@@ -12,12 +12,16 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] bool StatusBool;
     [SerializeField] int Open = 3;
     [SerializeField] int Close = 4;
-    [SerializeField] int Opened = 2;
-    [SerializeField] int Closed = 1;
+    [SerializeField] bool StartCondition;
+    [SerializeField] float MaxScale;
+    [SerializeField] bool IsMaxScaleSet = false;
+    [SerializeField] bool IsMinScaleSet = false;
+    //MaxScale = 6.154472f;
+
 
     void Start()
     {
-        
+        StartCondition = false;
     }
 
     public void OpenSettingsMenu()
@@ -41,13 +45,13 @@ public class SettingsScript : MonoBehaviour
         if (Status == Open && !StatusBool)
         {
             Status = Close;
-            Timer = 0;
+
+              
         }
 
         if (Status == Close && StatusBool)
         {
             Status = Open;
-            Timer = 0;
         }
 
         
@@ -68,18 +72,31 @@ public class SettingsScript : MonoBehaviour
         if (Status == Open)
         {
             OpenSettingsMenu();
-            if (Timer <= 1.7f)
+            if (Timer <= 1.7f && !IsMaxScaleSet)
             {
                 Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
                 Menu.transform.Rotate(0, 0, 200 * Time.deltaTime);
             }
+
+            StartCondition = true;
+
+            if (Menu.transform.localScale.magnitude > MaxScale)
+            {
+                IsMaxScaleSet = true;
+            }
+
+            else
+            {
+                IsMaxScaleSet = false;
+            }
             
+             Timer = 0;
             
         }
 
-        if (Status == Close)
+        if (Status == Close && StartCondition)
         {
-            if (Timer <= 1.7f)
+            if (Timer <= 1.7f && !IsMinScaleSet)
             {
                 Menu.transform.localScale -= Vector3.one * 3 * Time.deltaTime;
                 Menu.transform.Rotate(0, 0, -200 * Time.deltaTime);
@@ -88,12 +105,23 @@ public class SettingsScript : MonoBehaviour
             {
                 CloseSettingsMenu();
             }
+
+            if (Menu.transform.localScale.magnitude < 1f)
+            {
+                IsMinScaleSet = true;
+            }
+            else
+            {
+                IsMinScaleSet = false;  
+            }
             
+            Timer = 0;         
+
         }
+        
 
         Timer = Timer + Time.deltaTime * Speed;
 
-        Debug.Log(Status);
 
 
 

@@ -2496,8 +2496,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1708822016}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
+      - m_Target: {fileID: 1708822014}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: SettingsMenu
         m_Mode: 1
         m_Arguments:
@@ -2814,7 +2814,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708822013}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 632462f0607281516ab6a784eec101da, type: 3}
   m_Name: 
@@ -2830,8 +2830,8 @@ MonoBehaviour:
   StatusBool: 0
   Open: 3
   Close: 4
-  Opened: 2
-  Closed: 1
+  StartCondition: 0
+  MaxScale: 11
 --- !u!4 &1708822015
 Transform:
   m_ObjectHideFlags: 0
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708822013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f60e7b9abdf66bdc7a545f993cf3e68c, type: 3}
   m_Name: 
