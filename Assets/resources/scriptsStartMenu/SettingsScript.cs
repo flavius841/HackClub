@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class SettingsScript : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] float MaxScale;
     [SerializeField] bool IsMaxScaleSet = false;
     [SerializeField] bool IsMinScaleSet = false;
+    [SerializeField] TextMeshProUGUI ExtrasText;
+    [SerializeField] TextMeshProUGUI QuitButtonText;
+    [SerializeField] TextMeshProUGUI ExtrasButtonText;
+
+
     //MaxScale = 6.154472f;
 
 
@@ -66,6 +72,29 @@ public class SettingsScript : MonoBehaviour
     {
         Invoke("LoadLevel1", 1f);
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is closed");
+    }
+
+    public void InvokeCloseGAme()
+    {
+        Invoke("CloseGame", 1f);
+    }
+
+    public void OpenExtras()
+    {
+        ExtrasText.gameObject.SetActive(true);
+        QuitButtonText.gameObject.SetActive(false);
+        ExtrasButtonText.gameObject.SetActive(false);
+    }
+
+    public void InvokeOpenExtras()
+    {
+        Invoke("OpenExtras", 1f);
+    }                                                                                                           
     
     void Update()
     {
@@ -90,7 +119,7 @@ public class SettingsScript : MonoBehaviour
                 IsMaxScaleSet = false;
             }
             
-             Timer = 0;
+            Timer = 0;
             
         }
 
@@ -118,9 +147,11 @@ public class SettingsScript : MonoBehaviour
             Timer = 0;         
 
         }
-        
+
 
         Timer = Timer + Time.deltaTime * Speed;
+
+        
 
 
 
