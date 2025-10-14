@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 public class SettingsScript : MonoBehaviour
 {
-    public GameObject MenuPrefab;
+
     public GameObject Menu;
-    public Transform Canvass;
+
     [SerializeField] float Xpos, Ypos;
-    [SerializeField] float Speed;
+
     [SerializeField] int Status;
     [SerializeField] bool StatusBool;
     [SerializeField] int Open = 3;
@@ -18,7 +18,7 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] float BigerMaxScale;
     [SerializeField] bool IsMaxScaleSet = false;
     [SerializeField] bool IsBigerMaxScaleSet = false;
-    [SerializeField] bool IsMinScaleSet = false;
+
     [SerializeField] TextMeshProUGUI ExtrasText;
     [SerializeField] TextMeshProUGUI QuitButtonText;
     [SerializeField] TextMeshProUGUI ExtrasButtonText;
@@ -117,26 +117,13 @@ public class SettingsScript : MonoBehaviour
         if (Status == Open)
         {
             OpenSettingsMenu();
-            if (!IsMaxScaleSet)
+            if (Menu.transform.localScale.magnitude <= MaxScale)
             {
                 Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
                 Menu.transform.Rotate(0, 0, 200 * Time.deltaTime);
             }
 
             StartCondition = true;
-
-            if (Menu.transform.localScale.magnitude > MaxScale)
-            {
-                IsMaxScaleSet = true;
-            }
-
-            else
-            {
-                IsMaxScaleSet = false;
-            }
-            
-            
-            
         }
 
         if (Status == Close && StartCondition)
@@ -161,38 +148,22 @@ public class SettingsScript : MonoBehaviour
         {
             OpenExtras();
 
-            if (!IsBigerMaxScaleSet && Status == Open)
+            if (Menu.transform.localScale.magnitude <= BigerMaxScale && Status == Open)
             {
                 Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
             }
 
-            if (Menu.transform.localScale.magnitude > BigerMaxScale)
-            {
-                IsBigerMaxScaleSet = true;
-            }
-
-            else
-            {
-                IsBigerMaxScaleSet = false;
-            }
-            
-            if (Menu.transform.eulerAngles.z >= 0.5f && Menu.transform.eulerAngles.z <= 359.5f)
+            if (Menu.transform.eulerAngles.z >= 0.5f && Menu.transform.eulerAngles.z <= 179.5f)
             {
                 Menu.transform.Rotate(0, 0, -100 * Time.deltaTime);
             }
+            
+            if (Menu.transform.eulerAngles.z > 179.5f && Menu.transform.eulerAngles.z <= 359.5f)
+            {
+                Menu.transform.Rotate(0, 0, 100 * Time.deltaTime);
+            }
     
         }
-
-        
-        
-
-
-
-        
-        
-
-
-
 
         
     }

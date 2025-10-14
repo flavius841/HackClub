@@ -16,7 +16,7 @@ public class Controlingtheplayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "wheel1" || other.tag == "wheel2")
+        if (other.tag == "Car")
         {
             TouchPlayer = true;
         }
@@ -26,7 +26,7 @@ public class Controlingtheplayer : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "wheel1" || other.tag == "wheel2")
+        if (other.tag == "Car")
         {
             TouchPlayer = false;
         }

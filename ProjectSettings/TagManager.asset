@@ -8,6 +8,7 @@ TagManager:
   - wheel2
   - player
   - Ground
+  - Car
   layers:
   - Default
   - TransparentFX
