@@ -22,7 +22,7 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI ExtrasText;
     [SerializeField] TextMeshProUGUI QuitButtonText;
     [SerializeField] TextMeshProUGUI ExtrasButtonText;
-    [SerializeField] bool StarExtrasPreparetions = false;
+    [SerializeField] bool StartExtrasPreparetions = false;
     [SerializeField] Button ExtrasButton;
 
 
@@ -95,15 +95,16 @@ public class SettingsScript : MonoBehaviour
         QuitButtonText.gameObject.SetActive(false);
         ExtrasButtonText.gameObject.SetActive(false);
         ExtrasButton.enabled = false;
-        StarExtrasPreparetions = true;
+        StartExtrasPreparetions = true;
     }
 
     public void CloseExtras()
     {
         ExtrasText.gameObject.SetActive(false);
         QuitButtonText.gameObject.SetActive(true);
+        ExtrasButtonText.gameObject.SetActive(true);
         ExtrasButton.enabled = true;
-        StarExtrasPreparetions = false;
+        StartExtrasPreparetions = false;
     }
 
     public void InvokeOpenExtras()
@@ -140,7 +141,7 @@ public class SettingsScript : MonoBehaviour
 
         if (Status == Close && StartCondition)
         {
-            if (!IsMinScaleSet)
+            if (Menu.transform.localScale.magnitude >= 1f)
             {
                 Menu.transform.localScale -= Vector3.one * 3 * Time.deltaTime;
                 Menu.transform.Rotate(0, 0, -200 * Time.deltaTime);
@@ -148,21 +149,15 @@ public class SettingsScript : MonoBehaviour
             else
             {
                 CloseSettingsMenu();
+                CloseExtras();
+                Menu.transform.rotation = Quaternion.Euler(0f, 0f, -30f);
             }
 
-            if (Menu.transform.localScale.magnitude < 1f)
-            {
-                IsMinScaleSet = true;
-            }
-            else
-            {
-                IsMinScaleSet = false;
-            }
 
 
         }
-        
-        if (StarExtrasPreparetions)
+
+        if (StartExtrasPreparetions)
         {
             OpenExtras();
 
@@ -180,9 +175,17 @@ public class SettingsScript : MonoBehaviour
             {
                 IsBigerMaxScaleSet = false;
             }
-
             
+            if (Menu.transform.eulerAngles.z >= 0.5f && Menu.transform.eulerAngles.z <= 359.5f)
+            {
+                Menu.transform.Rotate(0, 0, -100 * Time.deltaTime);
+            }
+    
         }
+
+        
+        
+
 
 
         
