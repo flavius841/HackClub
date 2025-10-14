@@ -2318,6 +2318,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2365,6 +2389,17 @@ PrefabInstance:
       addedObject: {fileID: 390255028}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+--- !u!114 &961899455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5313822613418288756, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
+  m_PrefabInstance: {fileID: 527567581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &965563258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,7 +3082,6 @@ MonoBehaviour:
   Canvass: {fileID: 1720975910}
   Xpos: 24.4
   Ypos: 0
-  Timer: 0
   Speed: 1
   Status: 4
   StatusBool: 0
@@ -3055,11 +3089,15 @@ MonoBehaviour:
   Close: 4
   StartCondition: 0
   MaxScale: 11
+  BigerMaxScale: 17
   IsMaxScaleSet: 0
+  IsBigerMaxScaleSet: 0
   IsMinScaleSet: 0
   ExtrasText: {fileID: 390255029}
   QuitButtonText: {fileID: 1856658322}
   ExtrasButtonText: {fileID: 433048729}
+  StarExtrasPreparetions: 0
+  ExtrasButton: {fileID: 961899455}
 --- !u!4 &1708822015
 Transform:
   m_ObjectHideFlags: 0

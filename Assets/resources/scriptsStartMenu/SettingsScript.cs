@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class SettingsScript : MonoBehaviour
 {
@@ -7,7 +8,6 @@ public class SettingsScript : MonoBehaviour
     public GameObject Menu;
     public Transform Canvass;
     [SerializeField] float Xpos, Ypos;
-    [SerializeField] float Timer;
     [SerializeField] float Speed;
     [SerializeField] int Status;
     [SerializeField] bool StatusBool;
@@ -15,11 +15,15 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] int Close = 4;
     [SerializeField] bool StartCondition;
     [SerializeField] float MaxScale;
+    [SerializeField] float BigerMaxScale;
     [SerializeField] bool IsMaxScaleSet = false;
+    [SerializeField] bool IsBigerMaxScaleSet = false;
     [SerializeField] bool IsMinScaleSet = false;
     [SerializeField] TextMeshProUGUI ExtrasText;
     [SerializeField] TextMeshProUGUI QuitButtonText;
     [SerializeField] TextMeshProUGUI ExtrasButtonText;
+    [SerializeField] bool StarExtrasPreparetions = false;
+    [SerializeField] Button ExtrasButton;
 
 
     //MaxScale = 6.154472f;
@@ -28,6 +32,7 @@ public class SettingsScript : MonoBehaviour
     void Start()
     {
         StartCondition = false;
+        ExtrasButton.GetComponent<Button>();
     }
 
     public void OpenSettingsMenu()
@@ -89,6 +94,16 @@ public class SettingsScript : MonoBehaviour
         ExtrasText.gameObject.SetActive(true);
         QuitButtonText.gameObject.SetActive(false);
         ExtrasButtonText.gameObject.SetActive(false);
+        ExtrasButton.enabled = false;
+        StarExtrasPreparetions = true;
+    }
+
+    public void CloseExtras()
+    {
+        ExtrasText.gameObject.SetActive(false);
+        QuitButtonText.gameObject.SetActive(true);
+        ExtrasButton.enabled = true;
+        StarExtrasPreparetions = false;
     }
 
     public void InvokeOpenExtras()
@@ -101,7 +116,7 @@ public class SettingsScript : MonoBehaviour
         if (Status == Open)
         {
             OpenSettingsMenu();
-            if (Timer <= 1.7f && !IsMaxScaleSet)
+            if (!IsMaxScaleSet)
             {
                 Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
                 Menu.transform.Rotate(0, 0, 200 * Time.deltaTime);
@@ -119,13 +134,13 @@ public class SettingsScript : MonoBehaviour
                 IsMaxScaleSet = false;
             }
             
-            Timer = 0;
+            
             
         }
 
         if (Status == Close && StartCondition)
         {
-            if (Timer <= 1.7f && !IsMinScaleSet)
+            if (!IsMinScaleSet)
             {
                 Menu.transform.localScale -= Vector3.one * 3 * Time.deltaTime;
                 Menu.transform.Rotate(0, 0, -200 * Time.deltaTime);
@@ -141,16 +156,36 @@ public class SettingsScript : MonoBehaviour
             }
             else
             {
-                IsMinScaleSet = false;  
+                IsMinScaleSet = false;
             }
-            
-            Timer = 0;         
 
+
+        }
+        
+        if (StarExtrasPreparetions)
+        {
+            OpenExtras();
+
+            if (!IsBigerMaxScaleSet && Status == Open)
+            {
+                Menu.transform.localScale += Vector3.one * 3 * Time.deltaTime;
+            }
+
+            if (Menu.transform.localScale.magnitude > BigerMaxScale)
+            {
+                IsBigerMaxScaleSet = true;
+            }
+
+            else
+            {
+                IsBigerMaxScaleSet = false;
+            }
+
+            
         }
 
 
-        Timer = Timer + Time.deltaTime * Speed;
-
+        
         
 
 
