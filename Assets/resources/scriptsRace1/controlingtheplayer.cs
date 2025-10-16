@@ -34,7 +34,7 @@ public class Controlingtheplayer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) && TouchPlayer)
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             GetComponent<SurfaceEffector2D>().enabled = true;
             surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, LowestSpeed, Acc * Time.deltaTime);
@@ -42,7 +42,7 @@ public class Controlingtheplayer : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.RightArrow) && TouchPlayer)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             GetComponent<SurfaceEffector2D>().enabled = true;
             surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, MaxSpeed, Acc * Time.deltaTime);

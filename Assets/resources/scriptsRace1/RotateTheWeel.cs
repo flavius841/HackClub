@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class RotateTheWeel : MonoBehaviour
 {
-    [Header("References")]
+     
     [SerializeField] Rigidbody2D carRigidbody;          // The car’s Rigidbody2D
     [SerializeField] LayerMask groundLayer;             // Assign your ground layer here
 
-    [Header("Wheel Settings")]
+    
     [SerializeField] float wheelRadius = 0.35f;
     [SerializeField] float rotationSmoothness = 10f;
     [SerializeField] float airSpinAcceleration = 300f;  // How fast the wheel spins in air when accelerating
@@ -18,7 +18,7 @@ public class RotateTheWeel : MonoBehaviour
 
     void Update()
     {
-        CheckGround();
+        //CheckGround();
 
         float linearSpeed = carRigidbody.linearVelocity.x;
         float targetAngularSpeed;
@@ -33,11 +33,11 @@ public class RotateTheWeel : MonoBehaviour
             // In air — allow spin input
             if (Input.GetAxis("Horizontal") > 0) // accelerate right
             {
-                currentAngularSpeed -= airSpinAcceleration * Time.deltaTime;
+                currentAngularSpeed += airSpinAcceleration * Time.deltaTime;
             }
             else if (Input.GetAxis("Horizontal") < 0) // accelerate left
             {
-                currentAngularSpeed += airSpinAcceleration * Time.deltaTime;
+                currentAngularSpeed -= airSpinAcceleration * Time.deltaTime;
             }
             else
             {
@@ -55,10 +55,10 @@ public class RotateTheWeel : MonoBehaviour
         transform.Rotate(Vector3.forward, -currentAngularSpeed * Time.deltaTime);
     }
 
-    void CheckGround()
-    {
-        // Raycast downward from the wheel's center
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
-        isGrounded = hit.collider != null;
-    }
+    // void CheckGround()
+    // {
+    //     // Raycast downward from the wheel's center
+    //     RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+    //     script1.TouchPlayer = hit.collider != null;
+    // }
 }
