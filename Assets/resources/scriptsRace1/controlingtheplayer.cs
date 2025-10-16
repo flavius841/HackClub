@@ -4,7 +4,9 @@ public class Controlingtheplayer : MonoBehaviour
 {
     private SurfaceEffector2D surfaceEffector;
     public bool TouchPlayer;
-    public float MaxSpeed, Acc, LowestSpeed;
+    public float MaxSpeed, Acc, LowestSpeed, inerty;
+    [SerializeField] Rigidbody2D carRigidbody;
+
 
     void Start()
     {
@@ -34,6 +36,25 @@ public class Controlingtheplayer : MonoBehaviour
 
     void Update()
     {
+
+
+        float linearSpeed = carRigidbody.linearVelocity.x;
+
+        float angle = carRigidbody.rotation;
+
+        if (angle > 26f)
+        {
+            inerty = 20f;
+        }
+        
+        
+
+        else
+        {
+            inerty = 5f;
+        }
+
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             GetComponent<SurfaceEffector2D>().enabled = true;
@@ -49,10 +70,24 @@ public class Controlingtheplayer : MonoBehaviour
 
         }
 
-        if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        if (angle < 0 && linearSpeed < -angle)
         {
-            GetComponent<SurfaceEffector2D>().enabled = false;
-            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, Acc * Time.deltaTime);
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, -angle, 2f * Time.deltaTime);
+
+
+        }
+        else if (angle >= 0 &&  linearSpeed < angle)
+        {
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, -angle, 2f * Time.deltaTime);
+
+
+        }
+
+        else if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        {
+            // GetComponent<SurfaceEffector2D>().enabled = false;
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, inerty * Time.deltaTime);
+
         }
 
         
