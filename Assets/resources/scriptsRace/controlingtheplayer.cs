@@ -6,6 +6,11 @@ public class Controlingtheplayer : MonoBehaviour
     public bool TouchPlayer;
     public float MaxSpeed, Acc, LowestSpeed, inerty;
     [SerializeField] Rigidbody2D carRigidbody;
+    [SerializeField] float normalInerty;
+    [SerializeField] float HighInerty;
+    [SerializeField] float PositiveInerty;
+    [SerializeField] int angleimparted;
+
 
 
     void Start()
@@ -44,12 +49,12 @@ public class Controlingtheplayer : MonoBehaviour
 
         if (angle > 26f)
         {
-            inerty = 20f;
+            inerty = HighInerty;
         }
 
         else
         {
-            inerty = 5f;
+            inerty =   normalInerty;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -68,22 +73,22 @@ public class Controlingtheplayer : MonoBehaviour
 
         else if (angle >= 7 && linearSpeed > 0)
         {
-            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, 20 * Time.deltaTime);
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, HighInerty * Time.deltaTime);
         }
 
         else if (angle < -7 && linearSpeed < 0)
         {
-            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, 20 * Time.deltaTime);
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, HighInerty * Time.deltaTime);
         }
 
         else if (angle < -7 && linearSpeed < -angle)
         {
-            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, -angle, 4f * Time.deltaTime);
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, -angle/angleimparted, PositiveInerty * Time.deltaTime);
 
         }
         else if (angle >= 7 && linearSpeed < angle)
         {
-            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, -angle, 4f * Time.deltaTime);
+            surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, -angle/angleimparted, PositiveInerty * Time.deltaTime);
         }
 
         else if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))

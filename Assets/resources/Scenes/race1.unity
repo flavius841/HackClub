@@ -2984,6 +2984,10 @@ MonoBehaviour:
   LowestSpeed: -20
   inerty: 5
   carRigidbody: {fileID: 483229352}
+  normalInerty: 5
+  HighInerty: 20
+  PositiveInerty: 4
+  angleimparted: 1
 --- !u!114 &804834644
 MonoBehaviour:
   m_ObjectHideFlags: 0
