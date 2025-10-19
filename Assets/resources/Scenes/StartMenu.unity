@@ -3077,12 +3077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632462f0607281516ab6a784eec101da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsScript
-  MenuPrefab: {fileID: 6525906381970963602, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
   Menu: {fileID: 1758114021}
-  Canvass: {fileID: 1720975910}
   Xpos: 24.4
   Ypos: 0
-  Speed: 1
   Status: 4
   StatusBool: 0
   Open: 3
@@ -3092,11 +3089,10 @@ MonoBehaviour:
   BigerMaxScale: 17
   IsMaxScaleSet: 0
   IsBigerMaxScaleSet: 0
-  IsMinScaleSet: 0
   ExtrasText: {fileID: 390255029}
   QuitButtonText: {fileID: 1856658322}
   ExtrasButtonText: {fileID: 433048729}
-  StarExtrasPreparetions: 0
+  StartExtrasPreparetions: 0
   ExtrasButton: {fileID: 961899455}
 --- !u!4 &1708822015
 Transform:

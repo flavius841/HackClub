@@ -14,8 +14,9 @@ public class RotateTheWeel : MonoBehaviour
     [SerializeField] float groundCheckDistance = 0.2f;  // Distance to check below wheel
 
     private float currentAngularSpeed;
-    public Controlingtheplayer script1; // Reference to the controlling script
-
+    public Controlingtheplayer Ground1;
+    public Controlingtheplayer Ground2; 
+    public Controlingtheplayer Ground3;
     void Update()
     {
         //CheckGround();
@@ -23,7 +24,7 @@ public class RotateTheWeel : MonoBehaviour
         float linearSpeed = carRigidbody.linearVelocity.x;
         float targetAngularSpeed;
 
-        if (script1.TouchPlayer)
+        if (Ground1.TouchPlayer || Ground2.TouchPlayer || Ground3.TouchPlayer)
         {
             // Use car velocity to set wheel rotation when grounded
             targetAngularSpeed = (linearSpeed / wheelRadius) * Mathf.Rad2Deg;
@@ -59,6 +60,6 @@ public class RotateTheWeel : MonoBehaviour
     // {
     //     // Raycast downward from the wheel's center
     //     RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
-    //     script1.TouchPlayer = hit.collider != null;
+    //     Ground1.TouchPlayer = hit.collider != null;
     // }
 }

@@ -7,11 +7,14 @@ public class RotatePlayer : MonoBehaviour
     public float LeftRotationSpeed, RightRotationSpeed;
     //public bool TouchGround;
 
-    // public TouchGroundFrontWheel script1;
-    // public TouchGroundBackWheel script2;
+    // public TouchGroundFrontWheel Ground1;
+    // public TouchGroundBackWheel Mud;
     // public PreventBugFront script3;
     // public PreventBugBack script4;
-    public Controlingtheplayer script1;
+    public Controlingtheplayer Ground1;
+    public Controlingtheplayer Ground2;
+    public Controlingtheplayer Ground3;
+    public Controlingtheplayer Mud;
     //[SerializeField] public bool ResetRot;
     // public float Rotvalue;
 
@@ -34,7 +37,7 @@ public class RotatePlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        // if (script1.Rotate1 && script2.Rotate2 && ResetRot)
+        // if (Ground1.Rotate1 && Mud.Rotate2 && ResetRot)
         // {
         //     rb2d.MoveRotation(Rotvalue);
         //     ResetRot = false;
@@ -47,7 +50,7 @@ public class RotatePlayer : MonoBehaviour
 
         Rotate();
 
-        // if (!script1.Rotate1 && !script2.Rotate2)
+        // if (!Ground1.Rotate1 && !Mud.Rotate2)
         // {
         //     ResetRot = true;
         // }
@@ -62,16 +65,16 @@ public class RotatePlayer : MonoBehaviour
     
     public void Rotate()
     {
-        // if (Input.GetKey(KeyCode.LeftArrow) && script1.Rotate1 && script2.Rotate2)
-        if (Input.GetKey(KeyCode.LeftArrow) && !script1.TouchPlayer)
+        // if (Input.GetKey(KeyCode.LeftArrow) && Ground1.Rotate1 && Mud.Rotate2)
+        if (Input.GetKey(KeyCode.LeftArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer && !Ground3.TouchPlayer && !Mud.TouchPlayer)
         {
             Debug.Log("Left torque applied");
             //transform.Rotate(0, 0, torqueAmount, Space.World);
             rb2d.MoveRotation(rb2d.rotation + LeftRotationSpeed * Time.fixedDeltaTime);
         }
 
-        //else if (Input.GetKey(KeyCode.RightArrow) && script1.Rotate1 && script2.Rotate2)
-        else if (Input.GetKey(KeyCode.RightArrow) && !script1.TouchPlayer)
+        //else if (Input.GetKey(KeyCode.RightArrow) && Ground1.Rotate1 && Mud.Rotate2)
+        else if (Input.GetKey(KeyCode.RightArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer && !Ground3.TouchPlayer && !Mud.TouchPlayer) 
         {
             Debug.Log("rIGHT torque applied");
             //transform.Rotate(0, 0, -torqueAmount, Space.World);
