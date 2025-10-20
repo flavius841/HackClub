@@ -52,7 +52,7 @@ public class RotateTheWeel : MonoBehaviour
             if (Mud.TouchMud && currentAngularSpeed > 900)
             {
                 MudParticles.transform.localPosition = new Vector3(15.6f, -3.8f, 0f);
-                transform.localRotation = Quaternion.Euler(0, 0, -240.255f);
+                MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
 
                 MudParticles.Play();
             }
@@ -60,7 +60,7 @@ public class RotateTheWeel : MonoBehaviour
             else if (Mud.TouchMud && currentAngularSpeed < -900)
             {
                 MudParticles.transform.localPosition = new Vector3(21.9f, -3.9f, 0f);
-                transform.rotation = Quaternion.Euler(0, 0, 366.285f);
+                MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
                 
                 MudParticles.Play();
             }
