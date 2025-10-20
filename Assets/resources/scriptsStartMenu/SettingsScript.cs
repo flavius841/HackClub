@@ -70,12 +70,24 @@ public class SettingsScript : MonoBehaviour
 
     public void LoadLevel1()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
+
 
     public void InvokeLoadeLevel1()
     {
         Invoke("LoadLevel1", 1f);
+    }
+
+    public void LoadLevel2()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+    }
+
+
+    public void InvokeLoadeLevel2()
+    {
+        Invoke("LoadLevel2", 1f);
     }
 
     public void CloseGame()
