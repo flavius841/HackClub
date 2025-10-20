@@ -9,6 +9,7 @@ TagManager:
   - player
   - Ground
   - Car
+  - Mud
   layers:
   - Default
   - TransparentFX

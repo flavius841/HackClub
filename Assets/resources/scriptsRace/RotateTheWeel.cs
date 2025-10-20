@@ -12,11 +12,14 @@ public class RotateTheWeel : MonoBehaviour
     [SerializeField] float airSpinAcceleration = 300f;  // How fast the wheel spins in air when accelerating
     [SerializeField] float airSpinDecay = 2f;           // How fast the spin slows down when not accelerating
     [SerializeField] float groundCheckDistance = 0.2f;  // Distance to check below wheel
+    [SerializeField] ParticleSystem MudParticles;
 
-    private float currentAngularSpeed;
+    [SerializeField] float currentAngularSpeed;
     public Controlingtheplayer Ground1;
-    public Controlingtheplayer Ground2; 
+    public Controlingtheplayer Ground2;
     public Controlingtheplayer Ground3;
+    public RotatePlayer Mud;
+    
     void Update()
     {
         //CheckGround();
@@ -44,6 +47,26 @@ public class RotateTheWeel : MonoBehaviour
             {
                 // Slow down spin gradually when no input
                 currentAngularSpeed = Mathf.Lerp(currentAngularSpeed, 0, Time.deltaTime * airSpinDecay);
+            }
+
+            if (Mud.TouchMud && currentAngularSpeed > 900)
+            {
+                MudParticles.transform.localPosition = new Vector3(15.6f, -3.8f, 0f);
+                transform.localRotation = Quaternion.Euler(0, 0, -240.255f);
+
+                MudParticles.Play();
+            }
+
+            else if (Mud.TouchMud && currentAngularSpeed < -900)
+            {
+                MudParticles.transform.localPosition = new Vector3(21.9f, -3.9f, 0f);
+                transform.rotation = Quaternion.Euler(0, 0, 366.285f);
+                
+                MudParticles.Play();
+            }
+            else
+            {
+                MudParticles.Stop();
             }
 
             targetAngularSpeed = currentAngularSpeed;

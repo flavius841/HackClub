@@ -15,8 +15,24 @@ public class RotatePlayer : MonoBehaviour
     public Controlingtheplayer Ground2;
     public Controlingtheplayer Ground3;
     public Controlingtheplayer Mud;
+    public bool TouchMud;
     //[SerializeField] public bool ResetRot;
     // public float Rotvalue;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Mud")
+        {
+            TouchMud = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Mud")
+        {
+            TouchMud = false;
+        }
+    }
 
   
 
