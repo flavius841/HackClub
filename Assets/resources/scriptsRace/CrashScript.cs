@@ -6,9 +6,11 @@ public class CrashScript : MonoBehaviour
     private SurfaceEffector2D surfaceEffector;
     public bool TouchHead;
     [SerializeField] float dellay;
+    [SerializeField] ParticleSystem Blood;
     void Start()
     {
         surfaceEffector = GetComponent<SurfaceEffector2D>();
+        Blood.Stop();
 
     }
 
@@ -17,6 +19,7 @@ public class CrashScript : MonoBehaviour
         if (other.tag == "player")
         {
             TouchHead = true;
+            Blood.Play();
         }
     }
 
@@ -26,8 +29,8 @@ public class CrashScript : MonoBehaviour
         {
             surfaceEffector.speed = 0f;
             Invoke("ReloadScene", dellay);
+            
         }
-
 
     }
     

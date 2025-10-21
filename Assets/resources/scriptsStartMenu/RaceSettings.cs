@@ -10,6 +10,15 @@ public class RaceSettings : MonoBehaviour
     [SerializeField] bool StartCondition;
     [SerializeField] float MaxScale;
 
+    public void QuitLevel()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
+    public void InvokeQuitLevel()
+    {
+        Invoke("QuitLevel", 1f);
+    }
 
     public void OpenSettingsMenu()
     {
@@ -38,7 +47,18 @@ public class RaceSettings : MonoBehaviour
         }
 
 
-    }   
+    }
+
+    public void LoadLevel2()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+    }
+    
+    public void InvokeLoadeLevel2()
+    {
+        Invoke("LoadLevel2", 1f);
+    }
+
     void Start()
     {
         
