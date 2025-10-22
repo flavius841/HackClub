@@ -23,6 +23,7 @@ public class Controlingtheplayer : MonoBehaviour
         {
             MaxSpeed = MaxSpeed - 20;
             carRigidbody = MonsterTruck.GetComponent<Rigidbody2D>();
+            LowestSpeed = LowestSpeed - 10;
         }
 
         if (FormulaCar.activeInHierarchy)

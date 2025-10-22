@@ -23,7 +23,7 @@ public class ControlingThePlayeInTheMud : MonoBehaviour
         {
             MaxSpeed = MaxSpeed + 20;
             carRigidbody = MonsterTruck.GetComponent<Rigidbody2D>();
-            LowestSpeed = LowestSpeed - 30;
+            LowestSpeed = LowestSpeed - 10;
 
         }
 
