@@ -3189,7 +3189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Controlingtheplayer
   TouchPlayer: 0
-  MaxSpeed: 40
+  MaxSpeed: 60
   Acc: 20
   LowestSpeed: -20
   inerty: 5
