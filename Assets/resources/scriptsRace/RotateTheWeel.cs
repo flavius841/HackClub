@@ -37,13 +37,21 @@ public class RotateTheWeel : MonoBehaviour
         else
         {
             // In air — allow spin input
-            if (Input.GetAxis("Horizontal") > 0) // accelerate right
+            if (Input.GetAxis("Horizontal") > 0 && currentAngularSpeed < 1200) // accelerate right
             {
                 currentAngularSpeed += airSpinAcceleration * Time.deltaTime;
+                if (currentAngularSpeed < 0)
+                {
+                    currentAngularSpeed += airSpinAcceleration * 2 * Time.deltaTime;
+                }
             }
-            else if (Input.GetAxis("Horizontal") < 0) // accelerate left
+            else if (Input.GetAxis("Horizontal") < 0 && currentAngularSpeed > -1200) // accelerate left
             {
                 currentAngularSpeed -= airSpinAcceleration * Time.deltaTime;
+                if (currentAngularSpeed > 0)
+                {
+                    currentAngularSpeed -= airSpinAcceleration * 2 * Time.deltaTime;
+                }
             }
             else
             {
@@ -51,44 +59,50 @@ public class RotateTheWeel : MonoBehaviour
                 currentAngularSpeed = Mathf.Lerp(currentAngularSpeed, 0, Time.deltaTime * airSpinDecay);
             }
 
-            if (Mud.TouchMud && currentAngularSpeed > 900)
+            if (FormulaCar.activeInHierarchy)
             {
-                if (FormulaCar.activeInHierarchy)
+                if (Mud.TouchMud && currentAngularSpeed > 700)
                 {
                     MudParticles.transform.localPosition = new Vector3(15.6f, -3.8f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
+                    MudParticles.Play();
                 }
 
-                else
-                {
-                    MudParticles.transform.localPosition = new Vector3(-7.9f, 4.22f, 0f);
-                }
-                
-                MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
-                
-
-                MudParticles.Play();
-            }
-
-            else if (Mud.TouchMud && currentAngularSpeed < -900)
-            {
-                if (FormulaCar.activeInHierarchy)
+                else if (Mud.TouchMud && currentAngularSpeed < -700)
                 {
                     MudParticles.transform.localPosition = new Vector3(21.9f, -3.9f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.Play();
                 }
-                
+
                 else
                 {
-                    MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
+                    MudParticles.Stop();
                 }
-                
-                MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
-                
-                MudParticles.Play();
             }
-            else
+            
+            if (MonsterTruck.activeInHierarchy)
             {
-                MudParticles.Stop();
+                if (Mud.TouchMud && currentAngularSpeed > 200)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-7.9f, 4.22f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
+                    MudParticles.Play();
+                }
+
+                else if (Mud.TouchMud && currentAngularSpeed < -200)
+                {
+                    MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.Play();
+                }
+
+                else
+                {
+                    MudParticles.Stop();
+                }
             }
+
 
             targetAngularSpeed = currentAngularSpeed;
         }

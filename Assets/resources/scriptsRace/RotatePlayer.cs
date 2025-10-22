@@ -14,7 +14,7 @@ public class RotatePlayer : MonoBehaviour
     public Controlingtheplayer Ground1;
     public Controlingtheplayer Ground2;
     public Controlingtheplayer Ground3;
-    public Controlingtheplayer Mud;
+    public ControlingThePlayeInTheMud Mud;
     public bool TouchMud;
     //[SerializeField] public bool ResetRot;
     // public float Rotvalue;

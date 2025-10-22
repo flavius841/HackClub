@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Controlingtheplayer : MonoBehaviour
+public class ControlingThePlayeInTheMud : MonoBehaviour
 {
     private SurfaceEffector2D surfaceEffector;
     public bool TouchPlayer;
@@ -21,8 +21,10 @@ public class Controlingtheplayer : MonoBehaviour
 
         if (MonsterTruck.activeInHierarchy)
         {
-            MaxSpeed = MaxSpeed - 20;
+            MaxSpeed = MaxSpeed + 20;
             carRigidbody = MonsterTruck.GetComponent<Rigidbody2D>();
+            LowestSpeed = LowestSpeed - 30;
+
         }
 
         if (FormulaCar.activeInHierarchy)
@@ -110,13 +112,5 @@ public class Controlingtheplayer : MonoBehaviour
             surfaceEffector.speed = Mathf.MoveTowards(surfaceEffector.speed, 0, inerty * Time.deltaTime);
 
         }
-
-        
-
-
-
-
     }
-    
 }
-

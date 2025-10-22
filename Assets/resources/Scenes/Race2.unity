@@ -11348,6 +11348,8 @@ MonoBehaviour:
   HighInerty: 20
   PositiveInerty: 4
   angleimparted: 1
+  FormulaCar: {fileID: 1651793249}
+  MonsterTruck: {fileID: 2077748251}
 --- !u!114 &581053446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11559,7 +11561,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.6
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -11612,8 +11614,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 50
-      minScalar: 40
+      scalar: 80
+      minScalar: 60
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -16213,8 +16215,8 @@ GameObject:
   - component: {fileID: 635480220}
   - component: {fileID: 635480219}
   - component: {fileID: 635480218}
-  - component: {fileID: 635480221}
   - component: {fileID: 635480222}
+  - component: {fileID: 635480223}
   m_Layer: 0
   m_Name: Mud
   m_TagString: Mud
@@ -16897,28 +16899,6 @@ SurfaceEffector2D:
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
---- !u!114 &635480221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635480214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43af7f70038b219e19afe32c3c89f10a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Controlingtheplayer
-  TouchPlayer: 0
-  MaxSpeed: 20
-  Acc: 10
-  LowestSpeed: -10
-  inerty: 0
-  carRigidbody: {fileID: 1233277345}
-  normalInerty: 10
-  HighInerty: 40
-  PositiveInerty: 2
-  angleimparted: 2
 --- !u!114 &635480222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16934,6 +16914,30 @@ MonoBehaviour:
   TouchHead: 0
   dellay: 1.5
   Blood: {fileID: 167682649}
+--- !u!114 &635480223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635480214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d3c6e2f72c7e60cadca438196c0113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControlingThePlayeInTheMud
+  TouchPlayer: 0
+  MaxSpeed: 20
+  Acc: 10
+  LowestSpeed: -10
+  inerty: 0
+  carRigidbody: {fileID: 1233277345}
+  normalInerty: 10
+  HighInerty: 40
+  PositiveInerty: 2
+  angleimparted: 2
+  FormulaCar: {fileID: 1651793249}
+  MonsterTruck: {fileID: 2077748251}
 --- !u!1 &673280847
 GameObject:
   m_ObjectHideFlags: 0
@@ -17350,7 +17354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1093902367363932424, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2629828863788018526, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: Mud
@@ -17375,7 +17379,7 @@ PrefabInstance:
     - target: {fileID: 2629828863788018526, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: script2
       value: 
-      objectReference: {fileID: 635480221}
+      objectReference: {fileID: 0}
     - target: {fileID: 2629828863788018526, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: FormulaCar
       value: 
@@ -17451,7 +17455,15 @@ PrefabInstance:
     - target: {fileID: 6986366786652026716, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: script2
       value: 
-      objectReference: {fileID: 635480221}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986366786652026716, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+      propertyPath: FormulaCar
+      value: 
+      objectReference: {fileID: 1651793249}
+    - target: {fileID: 6986366786652026716, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+      propertyPath: MonsterTruck
+      value: 
+      objectReference: {fileID: 2077748251}
     - target: {fileID: 6986366786652026716, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: MudParticles
       value: 
@@ -17459,7 +17471,7 @@ PrefabInstance:
     - target: {fileID: 8752079900336363342, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: Mud
       value: 
-      objectReference: {fileID: 635480221}
+      objectReference: {fileID: 635480223}
     - target: {fileID: 8752079900336363342, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: Ground1
       value: 
@@ -17479,7 +17491,7 @@ PrefabInstance:
     - target: {fileID: 8752079900336363342, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: script2
       value: 
-      objectReference: {fileID: 635480221}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7755672154028386528, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
     - {fileID: 8737776208217110351, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
@@ -17515,6 +17527,7 @@ GameObject:
   - component: {fileID: 1236971960}
   - component: {fileID: 1236971959}
   - component: {fileID: 1236971958}
+  - component: {fileID: 1236971961}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -17599,6 +17612,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1236971961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236971957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914e847c183767e138088dca7014c94b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetCamera
+  vcam: {fileID: 1236971959}
+  FormulaCar: {fileID: 704469464}
+  MonsterTruck: {fileID: 4975331}
 --- !u!1 &1377838663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6525906381970963602, guid: f4b09d5d83efc534ba2b9b40e7283a2a, type: 3}
@@ -18102,6 +18130,8 @@ MonoBehaviour:
   HighInerty: 20
   PositiveInerty: 4
   angleimparted: 1
+  FormulaCar: {fileID: 1651793249}
+  MonsterTruck: {fileID: 2077748251}
 --- !u!252 &1691435367
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
@@ -24061,6 +24091,8 @@ MonoBehaviour:
   HighInerty: 20
   PositiveInerty: 4
   angleimparted: 1
+  FormulaCar: {fileID: 1651793249}
+  MonsterTruck: {fileID: 2077748251}
 --- !u!252 &1882471647
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
@@ -25105,7 +25137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2077748252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25123,7 +25155,7 @@ MonoBehaviour:
   Ground1: {fileID: 581053445}
   Ground2: {fileID: 1691435366}
   Ground3: {fileID: 1882471646}
-  Mud: {fileID: 635480221}
+  Mud: {fileID: 635480223}
   TouchMud: 0
 --- !u!4 &2077748253
 Transform:
