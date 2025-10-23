@@ -20,7 +20,7 @@ public class RotateTheWeel : MonoBehaviour
     public Controlingtheplayer Ground1;
     public Controlingtheplayer Ground2;
     public Controlingtheplayer Ground3;
-    public RotatePlayer Mud;
+    public ControlingThePlayeInTheMud Mud;
     
     void Update()
     {
@@ -61,14 +61,14 @@ public class RotateTheWeel : MonoBehaviour
 
             if (FormulaCar.activeInHierarchy)
             {
-                if (Mud.TouchMud && currentAngularSpeed > 700)
+                if (Mud.TouchPlayer && currentAngularSpeed > 700)
                 {
                     MudParticles.transform.localPosition = new Vector3(15.6f, -3.8f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
                     MudParticles.Play();
                 }
 
-                else if (Mud.TouchMud && currentAngularSpeed < -700)
+                else if (Mud.TouchPlayer && currentAngularSpeed < -700)
                 {
                     MudParticles.transform.localPosition = new Vector3(21.9f, -3.9f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
@@ -83,14 +83,14 @@ public class RotateTheWeel : MonoBehaviour
             
             if (MonsterTruck.activeInHierarchy)
             {
-                if (Mud.TouchMud && currentAngularSpeed > 200)
+                if (Mud.TouchPlayer && currentAngularSpeed > 200)
                 {
                     MudParticles.transform.localPosition = new Vector3(-7.9f, 4.22f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
                     MudParticles.Play();
                 }
 
-                else if (Mud.TouchMud && currentAngularSpeed < -200)
+                else if (Mud.TouchPlayer && currentAngularSpeed < -200)
                 {
                     MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
