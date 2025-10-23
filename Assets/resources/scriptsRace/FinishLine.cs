@@ -17,6 +17,11 @@ public class FinishLine : MonoBehaviour
     [SerializeField] int Status;
     [SerializeField] bool StartCondition;
     [SerializeField] float MaxScale;
+    [SerializeField] GameObject Ground1;
+    [SerializeField] GameObject Ground2;
+    [SerializeField] GameObject Ground3;
+    [SerializeField] GameObject Mud;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,6 +32,10 @@ public class FinishLine : MonoBehaviour
             vcam.LookAt = null;
             Debug.Log("Car reached finish line!");
             Invoke("OpenSettingsMenu", 2f);
+            Ground1.GetComponent<CrashScript>().enabled = false;
+            Ground2.GetComponent<CrashScript>().enabled = false;
+            Ground3.GetComponent<CrashScript>().enabled = false;
+            Mud.GetComponent<CrashScript>().enabled = false;
         }
 
     }
@@ -48,6 +57,8 @@ public class FinishLine : MonoBehaviour
             }
         }
     }
+
+    
     
 
     

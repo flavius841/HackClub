@@ -8,13 +8,16 @@ public class CrashScript : MonoBehaviour
     [SerializeField] float dellay;
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject NormalCar;
+    [SerializeField] GameObject Rallycar;
     [SerializeField] ParticleSystem Blood1;
     [SerializeField] ParticleSystem Blood2;
+    [SerializeField] ParticleSystem Blood3;
     void Start()
     {
         surfaceEffector = GetComponent<SurfaceEffector2D>();
         Blood1.Stop();
         Blood2.Stop();
+        Blood3.Stop();
 
     }
 
@@ -29,10 +32,16 @@ public class CrashScript : MonoBehaviour
                 Blood1.Play();
             }
 
-            if (NormalCar.activeInHierarchy)
+            else if (NormalCar.activeInHierarchy)
             {
                 Blood2.Play();
             }
+
+            else if (Rallycar.activeInHierarchy)
+            {
+                Blood3.Play();
+            }
+            
             
         }
     }

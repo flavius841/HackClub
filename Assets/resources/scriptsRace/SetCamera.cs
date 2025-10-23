@@ -7,6 +7,7 @@ public class SetCamera : MonoBehaviour
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
     [SerializeField] GameObject NormalCar;
+    [SerializeField] GameObject RallyCar;
     
     void Start()
     {
@@ -16,16 +17,22 @@ public class SetCamera : MonoBehaviour
             vcam.LookAt = FormulaCar.transform;
         }
 
-        if (MonsterTruck.activeInHierarchy)
+        else if (MonsterTruck.activeInHierarchy)
         {
             vcam.Follow = MonsterTruck.transform;
             vcam.LookAt = MonsterTruck.transform;
         }
 
-        if (NormalCar.activeInHierarchy)
+        else if (NormalCar.activeInHierarchy)
         {
             vcam.Follow = NormalCar.transform;
             vcam.LookAt = NormalCar.transform;
+        }
+
+        else
+        {
+            vcam.Follow = RallyCar.transform;
+            vcam.LookAt = RallyCar.transform;
         }
     }
 

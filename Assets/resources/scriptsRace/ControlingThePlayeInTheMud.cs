@@ -13,6 +13,7 @@ public class ControlingThePlayeInTheMud : MonoBehaviour
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
     [SerializeField] GameObject NormalCar;
+    [SerializeField] GameObject RallyCar;
 
 
 
@@ -28,14 +29,21 @@ public class ControlingThePlayeInTheMud : MonoBehaviour
 
         }
 
-        if (FormulaCar.activeInHierarchy)
+        else if (FormulaCar.activeInHierarchy)
         {
             carRigidbody = FormulaCar.GetComponent<Rigidbody2D>();
         }
 
-        if (NormalCar.activeInHierarchy)
+        else if (NormalCar.activeInHierarchy)
         {
             carRigidbody = NormalCar.GetComponent<Rigidbody2D>();
+        }
+
+        else
+        {
+            carRigidbody = RallyCar.GetComponent<Rigidbody2D>();
+            MaxSpeed = MaxSpeed + 10;
+            LowestSpeed = LowestSpeed - 5;
         }
 
     }

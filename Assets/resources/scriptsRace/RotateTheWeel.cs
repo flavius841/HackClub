@@ -9,6 +9,7 @@ public class RotateTheWeel : MonoBehaviour
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
     [SerializeField] GameObject NormalCar;
+    [SerializeField] GameObject RallyCar;
 
     [SerializeField] float wheelRadius;
     [SerializeField] float rotationSmoothness = 10f;
@@ -82,7 +83,7 @@ public class RotateTheWeel : MonoBehaviour
                 }
             }
 
-            if (MonsterTruck.activeInHierarchy)
+            else if (MonsterTruck.activeInHierarchy)
             {
                 if (Mud.TouchPlayer && currentAngularSpeed > 200)
                 {
@@ -103,8 +104,8 @@ public class RotateTheWeel : MonoBehaviour
                     MudParticles.Stop();
                 }
             }
-            
-            if (NormalCar.activeInHierarchy)
+
+            else if (NormalCar.activeInHierarchy)
             {
                 if (Mud.TouchPlayer && currentAngularSpeed > 500)
                 {
@@ -116,6 +117,28 @@ public class RotateTheWeel : MonoBehaviour
                 else if (Mud.TouchPlayer && currentAngularSpeed < -500)
                 {
                     MudParticles.transform.localPosition = new Vector3(-65.2f, 46.5032f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.Play();
+                }
+
+                else
+                {
+                    MudParticles.Stop();
+                }
+            }
+            
+            else 
+            {
+                if (Mud.TouchPlayer && currentAngularSpeed > 700)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-70.41497f, 121.6882f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
+                    MudParticles.Play();
+                }
+
+                else if (Mud.TouchPlayer && currentAngularSpeed < -700)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-59f, 121.6882f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
                     MudParticles.Play();
                 }
