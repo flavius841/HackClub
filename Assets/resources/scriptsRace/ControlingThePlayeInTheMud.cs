@@ -12,6 +12,7 @@ public class ControlingThePlayeInTheMud : MonoBehaviour
     [SerializeField] int angleimparted;
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
+    [SerializeField] GameObject NormalCar;
 
 
 
@@ -30,6 +31,11 @@ public class ControlingThePlayeInTheMud : MonoBehaviour
         if (FormulaCar.activeInHierarchy)
         {
             carRigidbody = FormulaCar.GetComponent<Rigidbody2D>();
+        }
+
+        if (NormalCar.activeInHierarchy)
+        {
+            carRigidbody = NormalCar.GetComponent<Rigidbody2D>();
         }
 
     }

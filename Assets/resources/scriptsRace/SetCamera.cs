@@ -6,6 +6,7 @@ public class SetCamera : MonoBehaviour
     [SerializeField] CinemachineCamera vcam;
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
+    [SerializeField] GameObject NormalCar;
     
     void Start()
     {
@@ -19,6 +20,12 @@ public class SetCamera : MonoBehaviour
         {
             vcam.Follow = MonsterTruck.transform;
             vcam.LookAt = MonsterTruck.transform;
+        }
+
+        if (NormalCar.activeInHierarchy)
+        {
+            vcam.Follow = NormalCar.transform;
+            vcam.LookAt = NormalCar.transform;
         }
     }
 

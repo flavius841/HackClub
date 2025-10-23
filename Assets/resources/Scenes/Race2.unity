@@ -5342,12 +5342,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136521796}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.93923414, w: -0.3432774}
-  m_LocalPosition: {x: 23.1, y: 17.2, z: -0.2319722}
-  m_LocalScale: {x: 0.68982, y: 0.68982, z: 0.68982}
+  m_LocalRotation: {x: -0, y: -0, z: -0.93923414, w: -0.3432774}
+  m_LocalPosition: {x: -66.44406, y: 47.71405, z: -0.021026205}
+  m_LocalScale: {x: 0.2896195, y: 0.2896195, z: 0.2896195}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1928723601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 138.756}
 --- !u!1 &159457712
 GameObject:
@@ -15592,6 +15592,7 @@ MonoBehaviour:
     m_Bits: 0
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
   wheelRadius: 4
   rotationSmoothness: 10
   airSpinAcceleration: 300
@@ -16351,6 +16352,7 @@ MonoBehaviour:
   angleimparted: 1
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
 --- !u!114 &581053446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16365,7 +16367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrashScript
   TouchHead: 0
   dellay: 1.5
-  Blood: {fileID: 167682649}
+  FormulaCar: {fileID: 1651793249}
+  NormalCar: {fileID: 1928723599}
+  Blood1: {fileID: 167682649}
+  Blood2: {fileID: 136521798}
 --- !u!1 &586879394
 GameObject:
   m_ObjectHideFlags: 0
@@ -16475,6 +16480,7 @@ MonoBehaviour:
     m_Bits: 0
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
   wheelRadius: 2.2
   rotationSmoothness: 10
   airSpinAcceleration: 300
@@ -21316,11 +21322,11 @@ Transform:
   m_GameObject: {fileID: 622395783}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.8696498, w: -0.49366915}
-  m_LocalPosition: {x: 16, y: 9.6, z: 0.091193005}
-  m_LocalScale: {x: 1.3197199, y: 1.3197199, z: 1.3197199}
+  m_LocalPosition: {x: -67.64, y: 46.45, z: 0.030461444}
+  m_LocalScale: {x: 0.4146992, y: 0.4146992, z: 0.4146992}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1928723601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -240.255}
 --- !u!1 &630544085
 GameObject:
@@ -26870,7 +26876,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrashScript
   TouchHead: 0
   dellay: 1.5
-  Blood: {fileID: 167682649}
+  FormulaCar: {fileID: 1651793249}
+  NormalCar: {fileID: 1928723599}
+  Blood1: {fileID: 167682649}
+  Blood2: {fileID: 136521798}
 --- !u!114 &635480223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26895,6 +26904,7 @@ MonoBehaviour:
   angleimparted: 2
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
 --- !u!1 &673280847
 GameObject:
   m_ObjectHideFlags: 0
@@ -27311,7 +27321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1093902367363932424, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2629828863788018526, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: Mud
@@ -27338,6 +27348,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2629828863788018526, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+      propertyPath: NormalCar
+      value: 
+      objectReference: {fileID: 1928723599}
+    - target: {fileID: 2629828863788018526, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: FormulaCar
       value: 
       objectReference: {fileID: 1651793249}
@@ -27351,11 +27365,11 @@ PrefabInstance:
       objectReference: {fileID: 159457715}
     - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.84305
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.655985
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27418,6 +27432,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6986366786652026716, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+      propertyPath: NormalCar
+      value: 
+      objectReference: {fileID: 1928723599}
+    - target: {fileID: 6986366786652026716, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: FormulaCar
       value: 
       objectReference: {fileID: 1651793249}
@@ -27456,6 +27474,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7755672154028386528, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
     - {fileID: 8737776208217110351, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+    - {fileID: 5836956978475496060, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
@@ -27588,6 +27607,7 @@ MonoBehaviour:
   vcam: {fileID: 1236971959}
   FormulaCar: {fileID: 704469464}
   MonsterTruck: {fileID: 4975331}
+  NormalCar: {fileID: 1681110146}
 --- !u!1 &1333999939
 GameObject:
   m_ObjectHideFlags: 0
@@ -27933,6 +27953,7 @@ MonoBehaviour:
     m_Bits: 0
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
   wheelRadius: 4
   rotationSmoothness: 10
   airSpinAcceleration: 300
@@ -28206,6 +28227,7 @@ MonoBehaviour:
   angleimparted: 1
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
 --- !u!252 &1691435367
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
@@ -29143,7 +29165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrashScript
   TouchHead: 0
   dellay: 1.5
-  Blood: {fileID: 167682649}
+  FormulaCar: {fileID: 1651793249}
+  NormalCar: {fileID: 1928723599}
+  Blood1: {fileID: 167682649}
+  Blood2: {fileID: 136521798}
 --- !u!1 &1698269944
 GameObject:
   m_ObjectHideFlags: 0
@@ -34167,6 +34192,7 @@ MonoBehaviour:
   angleimparted: 1
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
 --- !u!252 &1882471647
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
@@ -35190,7 +35216,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrashScript
   TouchHead: 0
   dellay: 1.5
-  Blood: {fileID: 167682649}
+  FormulaCar: {fileID: 1651793249}
+  NormalCar: {fileID: 1928723599}
+  Blood1: {fileID: 167682649}
+  Blood2: {fileID: 136521798}
 --- !u!1 &1928723599
 GameObject:
   m_ObjectHideFlags: 0
@@ -35210,7 +35239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1928723600
 Rigidbody2D:
   serializedVersion: 5
@@ -35246,15 +35275,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928723599}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 440.14, y: -282.28, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.014024863, w: 0.99990165}
+  m_LocalPosition: {x: 448.1575, y: -269.0196, z: -0.2}
   m_LocalScale: {x: 6.2765584, y: 6.2765584, z: 6.2765584}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1681110147}
   - {fileID: 1333999940}
+  - {fileID: 622395786}
+  - {fileID: 136521799}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.607}
 --- !u!70 &1928723602
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -35457,6 +35488,7 @@ MonoBehaviour:
     m_Bits: 0
   FormulaCar: {fileID: 1651793249}
   MonsterTruck: {fileID: 2077748251}
+  NormalCar: {fileID: 1928723599}
   wheelRadius: 2.2
   rotationSmoothness: 10
   airSpinAcceleration: 300
@@ -35487,7 +35519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2077748252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35646,5 +35678,3 @@ SceneRoots:
   - {fileID: 1698269947}
   - {fileID: 2077748253}
   - {fileID: 1928723601}
-  - {fileID: 136521799}
-  - {fileID: 622395786}

@@ -12,6 +12,7 @@ public class Controlingtheplayer : MonoBehaviour
     [SerializeField] int angleimparted;
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
+    [SerializeField] GameObject NormalCar;
 
 
 
@@ -29,6 +30,13 @@ public class Controlingtheplayer : MonoBehaviour
         if (FormulaCar.activeInHierarchy)
         {
             carRigidbody = FormulaCar.GetComponent<Rigidbody2D>();
+        }
+
+        if (NormalCar.activeInHierarchy)
+        {
+            MaxSpeed = MaxSpeed - 20;
+            carRigidbody = NormalCar.GetComponent<Rigidbody2D>();
+            LowestSpeed = LowestSpeed - 10;
         }
 
     }

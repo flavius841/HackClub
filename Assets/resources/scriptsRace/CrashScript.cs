@@ -6,11 +6,15 @@ public class CrashScript : MonoBehaviour
     private SurfaceEffector2D surfaceEffector;
     public bool TouchHead;
     [SerializeField] float dellay;
-    [SerializeField] ParticleSystem Blood;
+    [SerializeField] GameObject FormulaCar;
+    [SerializeField] GameObject NormalCar;
+    [SerializeField] ParticleSystem Blood1;
+    [SerializeField] ParticleSystem Blood2;
     void Start()
     {
         surfaceEffector = GetComponent<SurfaceEffector2D>();
-        Blood.Stop();
+        Blood1.Stop();
+        Blood2.Stop();
 
     }
 
@@ -19,7 +23,17 @@ public class CrashScript : MonoBehaviour
         if (other.tag == "player")
         {
             TouchHead = true;
-            Blood.Play();
+
+            if (FormulaCar.activeInHierarchy)
+            {
+                Blood1.Play();
+            }
+
+            if (NormalCar.activeInHierarchy)
+            {
+                Blood2.Play();
+            }
+            
         }
     }
 

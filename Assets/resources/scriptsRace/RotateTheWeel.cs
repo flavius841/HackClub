@@ -8,6 +8,7 @@ public class RotateTheWeel : MonoBehaviour
 
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
+    [SerializeField] GameObject NormalCar;
 
     [SerializeField] float wheelRadius;
     [SerializeField] float rotationSmoothness = 10f;
@@ -80,7 +81,7 @@ public class RotateTheWeel : MonoBehaviour
                     MudParticles.Stop();
                 }
             }
-            
+
             if (MonsterTruck.activeInHierarchy)
             {
                 if (Mud.TouchPlayer && currentAngularSpeed > 200)
@@ -93,6 +94,28 @@ public class RotateTheWeel : MonoBehaviour
                 else if (Mud.TouchPlayer && currentAngularSpeed < -200)
                 {
                     MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.Play();
+                }
+
+                else
+                {
+                    MudParticles.Stop();
+                }
+            }
+            
+            if (NormalCar.activeInHierarchy)
+            {
+                if (Mud.TouchPlayer && currentAngularSpeed > 500)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-67.64f, 46.5032f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -239.164f);
+                    MudParticles.Play();
+                }
+
+                else if (Mud.TouchPlayer && currentAngularSpeed < -500)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-65.2f, 46.5032f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
                     MudParticles.Play();
                 }
