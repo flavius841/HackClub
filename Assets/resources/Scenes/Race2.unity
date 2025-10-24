@@ -26546,7 +26546,7 @@ Transform:
   m_GameObject: {fileID: 635480214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 149.4, y: -76.2, z: -0.3}
+  m_LocalPosition: {x: 149.4, y: -76.2, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26946,10 +26946,6 @@ MonoBehaviour:
   MonsterTruck: {fileID: 2077748251}
   NormalCar: {fileID: 1928723599}
   RallyCar: {fileID: 964749773}
-  MudParticles: {fileID: 1399602202}
-  currentAngularSpeed: 0
-  airSpinAcceleration: 300
-  airSpinDecay: 2
 --- !u!1 &673280847
 GameObject:
   m_ObjectHideFlags: 0
@@ -27852,7 +27848,7 @@ Transform:
   m_GameObject: {fileID: 1333999939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37832,7 +37828,7 @@ MonoBehaviour:
   airSpinAcceleration: 300
   airSpinDecay: 2
   groundCheckDistance: 0.2
-  MudParticles: {fileID: 1355659214}
+  MudParticles: {fileID: 1399602200}
   currentAngularSpeed: 0
   Ground1: {fileID: 581053445}
   Ground2: {fileID: 1691435366}
@@ -50365,7 +50361,7 @@ Transform:
   m_GameObject: {fileID: 1928723599}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.014024863, w: 0.99990165}
-  m_LocalPosition: {x: 448.1575, y: -269.0196, z: -0.2}
+  m_LocalPosition: {x: 448.1575, y: -269.0196, z: -0.1}
   m_LocalScale: {x: 6.2765584, y: 6.2765584, z: 6.2765584}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50864,7 +50860,7 @@ MonoBehaviour:
   airSpinAcceleration: 300
   airSpinDecay: 2
   groundCheckDistance: 0.2
-  MudParticles: {fileID: 1399602202}
+  MudParticles: {fileID: 1399602200}
   currentAngularSpeed: 0
   Ground1: {fileID: 581053445}
   Ground2: {fileID: 1691435366}

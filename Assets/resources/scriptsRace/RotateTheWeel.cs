@@ -4,8 +4,7 @@ public class RotateTheWeel : MonoBehaviour
 {
      
     [SerializeField] Rigidbody2D carRigidbody;          // The car’s Rigidbody2D
-    [SerializeField] LayerMask groundLayer;    // Assign your ground layer here
-
+    [SerializeField] LayerMask groundLayer;    
     [SerializeField] GameObject FormulaCar;
     [SerializeField] GameObject MonsterTruck;
     [SerializeField] GameObject NormalCar;
@@ -16,7 +15,10 @@ public class RotateTheWeel : MonoBehaviour
     [SerializeField] float airSpinAcceleration = 300f;  // How fast the wheel spins in air when accelerating
     [SerializeField] float airSpinDecay = 2f;           // How fast the spin slows down when not accelerating
     [SerializeField] float groundCheckDistance = 0.2f;  // Distance to check below wheel
-    [SerializeField] ParticleSystem MudParticles;
+    //[SerializeField] ParticleSystem MudParticles;
+    [SerializeField] float TimerForMud;
+    [SerializeField] GameObject MudParticles;
+
 
     [SerializeField] float currentAngularSpeed;
     public Controlingtheplayer Ground1;
@@ -35,14 +37,13 @@ public class RotateTheWeel : MonoBehaviour
 
         if (Mud.TouchPlayer)
         {
-            Debug.Log("Mud.TouchPlayer true");
+            TimerForMud = 0;
 
         }
 
         else
         {
-            Debug.Log("Mud.TouchPlayer false");
-
+            TimerForMud += Time.deltaTime;
         }
 
         if (Ground1.TouchPlayer || Ground2.TouchPlayer || Ground3.TouchPlayer)
@@ -86,93 +87,93 @@ public class RotateTheWeel : MonoBehaviour
                 currentAngularSpeed = Mathf.Lerp(currentAngularSpeed, 0, Time.deltaTime * airSpinDecay);
             }
 
-            // if (FormulaCar.activeInHierarchy)
-            // {
-            //     if (Mud.TouchPlayer && currentAngularSpeed > 700)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(15.6f, -3.8f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
-            //         MudParticles.Play();
-            //     }
+            if (FormulaCar.activeInHierarchy)
+            {
+                if (Mud.TouchPlayer && currentAngularSpeed > 700)
+                {
+                    MudParticles.transform.localPosition = new Vector3(15.6f, -3.8f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else if (Mud.TouchPlayer && currentAngularSpeed < -700)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(21.9f, -3.9f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
-            //         MudParticles.Play();
-            //     }
+                else if (Mud.TouchPlayer && currentAngularSpeed < -700)
+                {
+                    MudParticles.transform.localPosition = new Vector3(21.9f, -3.9f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else
-            //     {
-            //         MudParticles.Stop();
-            //     }
-            // }
+                else
+                {
+                    MudParticles.gameObject.SetActive(false);
+                }
+            }
 
-            // else if (MonsterTruck.activeInHierarchy)
-            // {
-            //     if (Mud.TouchPlayer && currentAngularSpeed > 200)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(-7.9f, 4.22f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
-            //         MudParticles.Play();
-            //     }
+            else if (MonsterTruck.activeInHierarchy)
+            {
+                if (Mud.TouchPlayer && currentAngularSpeed > 200)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-7.9f, 4.22f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else if (Mud.TouchPlayer && currentAngularSpeed < -200)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
-            //         MudParticles.Play();
-            //     }
+                else if (Mud.TouchPlayer && currentAngularSpeed < -200)
+                {
+                    MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else
-            //     {
-            //         MudParticles.Stop();
-            //     }
-            // }
+                else
+                {
+                    MudParticles.gameObject.SetActive(false);
+                }
+            }
 
-            // else if (NormalCar.activeInHierarchy)
-            // {
-            //     if (Mud.TouchPlayer && currentAngularSpeed > 500)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(-67.64f, 46.5032f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -239.164f);
-            //         MudParticles.Play();
-            //     }
+            else if (NormalCar.activeInHierarchy)
+            {
+                if (Mud.TouchPlayer && currentAngularSpeed > 500)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-67.64f, 46.5032f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -239.164f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else if (Mud.TouchPlayer && currentAngularSpeed < -500)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(-65.2f, 46.5032f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
-            //         MudParticles.Play();
-            //     }
+                else if (Mud.TouchPlayer && currentAngularSpeed < -500)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-65.2f, 46.5032f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else
-            //     {
-            //         MudParticles.Stop();
-            //     }
-            // }
+                else
+                {
+                    MudParticles.gameObject.SetActive(false);
+                }
+            }
 
-            // else
-            // {
-            //     if (Mud.TouchPlayer && currentAngularSpeed > 700)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(-70.41497f, 121.6882f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
-            //         MudParticles.Play();
-            //     }
+            else
+            {
+                if (Mud.TouchPlayer && currentAngularSpeed > 700)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-70.41497f, 121.6882f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else if (Mud.TouchPlayer && currentAngularSpeed < -700)
-            //     {
-            //         MudParticles.transform.localPosition = new Vector3(-59f, 121.6882f, 0f);
-            //         MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
-            //         MudParticles.Play();
-            //     }
+                else if (Mud.TouchPlayer && currentAngularSpeed < -700)
+                {
+                    MudParticles.transform.localPosition = new Vector3(-59f, 121.6882f, 0f);
+                    MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
+                    MudParticles.gameObject.SetActive(true);
+                }
 
-            //     else
-            //     {
-            //         MudParticles.Stop();
-            //     }
-            // }
+                else if (TimerForMud > 0.2f || (currentAngularSpeed > -700 && currentAngularSpeed < 700)) 
+                {
+                    MudParticles.gameObject.SetActive(false);
+                }
+            }
 
 
             targetAngularSpeed = currentAngularSpeed;
