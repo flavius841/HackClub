@@ -103,7 +103,7 @@ public class RotateTheWeel : MonoBehaviour
                     MudParticles.gameObject.SetActive(true);
                 }
 
-                else
+                else if (TimerForMud > 0.2f || (currentAngularSpeed > -700 && currentAngularSpeed < 700)) 
                 {
                     MudParticles.gameObject.SetActive(false);
                 }
@@ -111,21 +111,21 @@ public class RotateTheWeel : MonoBehaviour
 
             else if (MonsterTruck.activeInHierarchy)
             {
-                if (Mud.TouchPlayer && currentAngularSpeed > 200)
+                if (Mud.TouchPlayer && currentAngularSpeed > 700)
                 {
                     MudParticles.transform.localPosition = new Vector3(-7.9f, 4.22f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -240.255f);
                     MudParticles.gameObject.SetActive(true);
                 }
 
-                else if (Mud.TouchPlayer && currentAngularSpeed < -200)
+                else if (Mud.TouchPlayer && currentAngularSpeed < -700)
                 {
                     MudParticles.transform.localPosition = new Vector3(10.8f, 4.22f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
                     MudParticles.gameObject.SetActive(true);
                 }
 
-                else
+                else if (TimerForMud > 0.2f || (currentAngularSpeed > -700 && currentAngularSpeed < 700)) 
                 {
                     MudParticles.gameObject.SetActive(false);
                 }
@@ -133,21 +133,21 @@ public class RotateTheWeel : MonoBehaviour
 
             else if (NormalCar.activeInHierarchy)
             {
-                if (Mud.TouchPlayer && currentAngularSpeed > 500)
+                if (Mud.TouchPlayer && currentAngularSpeed > 700)
                 {
                     MudParticles.transform.localPosition = new Vector3(-67.64f, 46.5032f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -239.164f);
                     MudParticles.gameObject.SetActive(true);
                 }
 
-                else if (Mud.TouchPlayer && currentAngularSpeed < -500)
+                else if (Mud.TouchPlayer && currentAngularSpeed < -700)
                 {
                     MudParticles.transform.localPosition = new Vector3(-65.2f, 46.5032f, 0f);
                     MudParticles.transform.rotation = Quaternion.Euler(0, 0, -366.285f);
                     MudParticles.gameObject.SetActive(true);
                 }
 
-                else
+                else if (TimerForMud > 0.2f || (currentAngularSpeed > -700 && currentAngularSpeed < 700)) 
                 {
                     MudParticles.gameObject.SetActive(false);
                 }

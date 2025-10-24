@@ -90,6 +90,28 @@ public class SettingsScript : MonoBehaviour
         Invoke("LoadLevel2", 1f);
     }
 
+    public void LoadLevel3()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+    }
+
+
+    public void InvokeLoadeLevel3()
+    {
+        Invoke("LoadLevel3", 1f);
+    }
+
+    public void LoadGarage()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+    }
+
+
+    public void InvokeGarage()
+    {
+        Invoke("LoadGarage", 1f);
+    }
+
     public void CloseGame()
     {
         Application.Quit();

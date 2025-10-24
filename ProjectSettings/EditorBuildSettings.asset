@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/resources/Scenes/LoadRace2.unity
     guid: 369e3b060fb5ab0b5993272f7aeb1ff5
+  - enabled: 1
+    path: Assets/resources/Scenes/Garage.unity
+    guid: ad7c89615cd24c729b1ff8a8dee06659
+  - enabled: 1
+    path: Assets/resources/Scenes/LoadRace3.unity
+    guid: 8e9e56281584087fbb58598700410f24
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
