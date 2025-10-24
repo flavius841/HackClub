@@ -84,7 +84,7 @@ public class RotatePlayer : MonoBehaviour
         // if (Input.GetKey(KeyCode.LeftArrow) && Ground1.Rotate1 && Mud.Rotate2)
         if (Input.GetKey(KeyCode.LeftArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer && !Ground3.TouchPlayer && !Mud.TouchPlayer)
         {
-            Debug.Log("Left torque applied");
+            
             //transform.Rotate(0, 0, torqueAmount, Space.World);
             rb2d.MoveRotation(rb2d.rotation + LeftRotationSpeed * Time.fixedDeltaTime);
         }
@@ -92,7 +92,7 @@ public class RotatePlayer : MonoBehaviour
         //else if (Input.GetKey(KeyCode.RightArrow) && Ground1.Rotate1 && Mud.Rotate2)
         else if (Input.GetKey(KeyCode.RightArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer && !Ground3.TouchPlayer && !Mud.TouchPlayer) 
         {
-            Debug.Log("rIGHT torque applied");
+            
             //transform.Rotate(0, 0, -torqueAmount, Space.World);
             rb2d.MoveRotation(rb2d.rotation - RightRotationSpeed * Time.fixedDeltaTime);
         }

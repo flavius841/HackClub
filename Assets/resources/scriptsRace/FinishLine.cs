@@ -15,7 +15,7 @@ public class FinishLine : MonoBehaviour
     
     [SerializeField] int Open = 3;
     [SerializeField] int Status;
-    [SerializeField] bool StartCondition;
+    [SerializeField] bool Limit;
     [SerializeField] float MaxScale;
     [SerializeField] GameObject Ground1;
     [SerializeField] GameObject Ground2;
@@ -36,6 +36,10 @@ public class FinishLine : MonoBehaviour
             Ground2.GetComponent<CrashScript>().enabled = false;
             Ground3.GetComponent<CrashScript>().enabled = false;
             Mud.GetComponent<CrashScript>().enabled = false;
+            if (Limit)
+            {
+                Invoke("ReloadScene", 1);
+            }
         }
 
     }
@@ -48,7 +52,7 @@ public class FinishLine : MonoBehaviour
 
     void Update()
     {
-        if (Status == Open)
+        if (Status == Open && !Limit)
         {
             if (Menu.transform.localScale.magnitude <= MaxScale)
             {
@@ -56,6 +60,12 @@ public class FinishLine : MonoBehaviour
                 Menu.transform.Rotate(0, 0, 200 * Time.deltaTime);
             }
         }
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     

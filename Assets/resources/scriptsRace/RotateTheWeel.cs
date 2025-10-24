@@ -38,6 +38,21 @@ public class RotateTheWeel : MonoBehaviour
         }
         else
         {
+            
+            // if (MudParticles.isPlaying)
+            // {
+            //     Debug.Log("MudParticles are currently playing!");
+            // }
+            // else
+            // {
+            //     Debug.Log("MudParticles are NOT playing!");
+            // }
+
+            if (MudParticles == null)
+                Debug.LogWarning(" MudParticles reference is missing!");
+            if (Mud == null)
+                Debug.LogWarning(" Mud script reference is missing!");
+
             // In air — allow spin input
             if (Input.GetAxis("Horizontal") > 0 && currentAngularSpeed < 1200) // accelerate right
             {
