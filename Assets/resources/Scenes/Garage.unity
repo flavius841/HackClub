@@ -769,7 +769,7 @@ Transform:
   m_GameObject: {fileID: 590709774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 0, z: 0}
+  m_LocalPosition: {x: -30, y: -1.2, z: 0}
   m_LocalScale: {x: 2.8379178, y: 2.8379178, z: 2.8379178}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -791,6 +791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveCarsGarage
   Towards: 0
   Back: 0
+  Step2: 0
   MoveSpeed: 60
   PosX: 0
   MaxPosX: 0
@@ -1128,6 +1129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveCarsGarage
   Towards: 0
   Back: 0
+  Step2: 0
   MoveSpeed: 60
   PosX: 0
   MaxPosX: 0
@@ -1329,6 +1331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveCarsGarage
   Towards: 0
   Back: 0
+  Step2: 0
   MoveSpeed: 60
   PosX: 0
   MaxPosX: 0
@@ -2057,6 +2060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveCarsGarage
   Towards: 0
   Back: 0
+  Step2: 0
   MoveSpeed: 60
   PosX: 0
   MaxPosX: 0
