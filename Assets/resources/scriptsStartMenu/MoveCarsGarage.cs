@@ -40,14 +40,14 @@ public class MoveCarsGarage : MonoBehaviour
         // PosX = transform.position.x;
 
         PosX = transform.position.x;
-        if (PosX == -45 && Timer > 0.5f)
+        if (PosX == -30 && Timer > 0.5f)
         {
-            transform.position = new Vector3(0, transform.position.y, transform.position.z);
-            MinPosX = 0;
+            transform.position = new Vector3(15, transform.position.y, transform.position.z);
+            MinPosX = 15;
             Timer = 0;
         }
 
-        else if ((PosX == -30 || PosX == -15 || PosX == 0 || PosX == 15) && Timer > 0.5f)
+        else if ((PosX == -30 || PosX == -15 || PosX == 0 || PosX == 15 || PosX == 30) && Timer > 0.5f)
         {
             Back = true;
             Towards = false;

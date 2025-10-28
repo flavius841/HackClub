@@ -4,10 +4,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     [SerializeField] float Timer;
     [SerializeField] float Speed;
-    [SerializeField] GameObject CarPrefab;
+    [SerializeField] GameObject RaceCarPrefab;
+    [SerializeField] GameObject NormalCarPrefab;
+    [SerializeField] GameObject MonsterCarPrefab;
+    [SerializeField] GameObject RallyCarPrefab;
     [SerializeField] int ID;
     private SurfaceEffector2D surfaceEffector;
     float randomSpeed;
+    [SerializeField] int RandomCar;
     void Start()
     {
         surfaceEffector = GetComponent<SurfaceEffector2D>();
@@ -22,11 +26,33 @@ public class NewMonoBehaviourScript : MonoBehaviour
             Timer = 0;
             ID++;
 
+            RandomCar = Random.Range(1, 5);
             randomSpeed = Random.Range(20f, 70f);
             surfaceEffector.speed = randomSpeed;
 
-            GameObject Car = Instantiate(CarPrefab);
-            Car.transform.name = ID.ToString();
+            if (RandomCar == 1)
+            {
+                GameObject Car = Instantiate(RallyCarPrefab);
+                Car.transform.name = ID.ToString();
+            }
+
+            else if (RandomCar == 2)
+            {
+                GameObject Car = Instantiate(MonsterCarPrefab);
+                Car.transform.name = ID.ToString();
+            }
+
+            else if (RandomCar == 3)
+            {
+                GameObject Car = Instantiate(NormalCarPrefab);
+                Car.transform.name = ID.ToString();
+            }
+
+            else
+            {
+                GameObject Car = Instantiate(RaceCarPrefab);
+                Car.transform.name = ID.ToString();
+            }
         }
 
         if (ID >= 3)

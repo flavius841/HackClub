@@ -103,7 +103,7 @@ public class SettingsScript : MonoBehaviour
 
     public void LoadGarage()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
     }
 
 
