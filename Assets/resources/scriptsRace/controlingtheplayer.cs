@@ -14,6 +14,7 @@ public class Controlingtheplayer : MonoBehaviour
     [SerializeField] GameObject MonsterTruck;
     [SerializeField] GameObject NormalCar;
     [SerializeField] GameObject RallyCar;
+    [SerializeField] bool Verified;
     
 
 
@@ -22,29 +23,7 @@ public class Controlingtheplayer : MonoBehaviour
     {
         surfaceEffector = GetComponent<SurfaceEffector2D>();
 
-        if (MonsterTruck.activeInHierarchy)
-        {
-            MaxSpeed = MaxSpeed - 20;
-            carRigidbody = MonsterTruck.GetComponent<Rigidbody2D>();
-            LowestSpeed = LowestSpeed - 10;
-        }
-
-        else if (FormulaCar.activeInHierarchy)
-        {
-            carRigidbody = FormulaCar.GetComponent<Rigidbody2D>();
-        }
-
-        else if (NormalCar.activeInHierarchy)
-        {
-            MaxSpeed = MaxSpeed - 20;
-            carRigidbody = NormalCar.GetComponent<Rigidbody2D>();
-        }
-
-        else 
-        {
-            carRigidbody = RallyCar.GetComponent<Rigidbody2D>();
-            MaxSpeed = MaxSpeed - 10;
-        }
+        
 
     }
 
@@ -70,7 +49,34 @@ public class Controlingtheplayer : MonoBehaviour
 
     void Update()
     {
+        if (!Verified)
+        {
+            if (MonsterTruck.activeInHierarchy)
+            {
+                MaxSpeed = MaxSpeed - 20;
+                carRigidbody = MonsterTruck.GetComponent<Rigidbody2D>();
+                LowestSpeed = LowestSpeed - 10;
+            }
 
+            else if (FormulaCar.activeInHierarchy)
+            {
+                carRigidbody = FormulaCar.GetComponent<Rigidbody2D>();
+            }
+
+            else if (NormalCar.activeInHierarchy)
+            {
+                MaxSpeed = MaxSpeed - 20;
+                carRigidbody = NormalCar.GetComponent<Rigidbody2D>();
+            }
+
+            else if (RallyCar.activeInHierarchy)
+            {
+                carRigidbody = RallyCar.GetComponent<Rigidbody2D>();
+                MaxSpeed = MaxSpeed - 10;
+            }
+
+            Verified = true;
+        }
 
         float linearSpeed = carRigidbody.linearVelocity.x;
 

@@ -13298,6 +13298,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 1486718341}
   NormalCar: {fileID: 1035717738}
   RallyCar: {fileID: 881523982}
+  Verified: 0
 --- !u!114 &804834644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13392,7 +13393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &881523983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13521,8 +13522,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881523982}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.338, y: -142.03, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 78.504654, y: -161.17932, z: 0}
   m_LocalScale: {x: 1.1945, y: 1.1945, z: 1.1945}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13531,7 +13532,7 @@ Transform:
   - {fileID: 585434257}
   - {fileID: 609064258}
   - {fileID: 896561580}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1667469238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &896561579
 GameObject:
@@ -18968,7 +18969,7 @@ Transform:
   m_GameObject: {fileID: 1035717738}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.014024863, w: 0.99990165}
-  m_LocalPosition: {x: 448.1575, y: -269.0196, z: -0.2}
+  m_LocalPosition: {x: 464.32416, y: -288.1689, z: -0.2}
   m_LocalScale: {x: 6.2765584, y: 6.2765584, z: 6.2765584}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18976,7 +18977,7 @@ Transform:
   - {fileID: 730860068}
   - {fileID: 2059050366}
   - {fileID: 1933052600}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1667469238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.607}
 --- !u!1 &1056987096
 GameObject:
@@ -19181,6 +19182,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 1486718341}
   NormalCar: {fileID: 1035717738}
   RallyCar: {fileID: 881523982}
+  Verified: 0
 --- !u!114 &1201742010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24484,6 +24486,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 1486718341}
   NormalCar: {fileID: 1035717738}
   RallyCar: {fileID: 881523982}
+  Verified: 0
 --- !u!114 &1312481735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25403,14 +25406,14 @@ Transform:
   m_GameObject: {fileID: 1486718341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0007818241, w: -0.9999997}
-  m_LocalPosition: {x: 8.5, y: -0.7, z: -0.1}
-  m_LocalScale: {x: 0.9648744, y: 0.9648744, z: 0.9648744}
+  m_LocalPosition: {x: 24.66665, y: -19.84933, z: -0.1}
+  m_LocalScale: {x: 0.9648745, y: 0.9648745, z: 0.9648744}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1323016525}
   - {fileID: 832984140}
   - {fileID: 1015570755}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1667469238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 359.91}
 --- !u!1 &1638171989 stripped
 GameObject:
@@ -25453,6 +25456,54 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.05, y: 15.88}
   m_Radius: 0.21
+--- !u!1 &1667469237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667469238}
+  - component: {fileID: 1667469239}
+  m_Layer: 0
+  m_Name: CarManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1667469238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667469237}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.16665, y: 19.14933, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 907978940}
+  - {fileID: 1486718347}
+  - {fileID: 1035717743}
+  - {fileID: 881523987}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667469239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667469237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172a48224d209b2f886b0bc5f5e0c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarManagerScript
 --- !u!1 &1667554839
 GameObject:
   m_ObjectHideFlags: 0
@@ -25518,6 +25569,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 1486718341}
   NormalCar: {fileID: 1035717738}
   RallyCar: {fileID: 881523982}
+  Verified: 0
 --- !u!114 &1667554842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40723,7 +40775,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1667469238}
     m_Modifications:
     - target: {fileID: 1093902367363932424, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_Name
@@ -40774,12 +40826,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1211442612}
     - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3197225
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3197225
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.942389
+      value: 6.224262
       objectReference: {fileID: 0}
     - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.0625324
+      value: -13.086798
       objectReference: {fileID: 0}
     - target: {fileID: 3651645937117674119, guid: e5d3eb4c5914dc0e4bdd93043680776b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41001,7 +41061,6 @@ SceneRoots:
   - {fileID: 1393678516}
   - {fileID: 804834639}
   - {fileID: 756214292}
-  - {fileID: 1034879288012704324}
   - {fileID: 2621199446991075252}
   - {fileID: 1201742012}
   - {fileID: 1667554844}
@@ -41010,6 +41069,4 @@ SceneRoots:
   - {fileID: 1399216073}
   - {fileID: 997953057}
   - {fileID: 658469520}
-  - {fileID: 1486718347}
-  - {fileID: 1035717743}
-  - {fileID: 881523987}
+  - {fileID: 1667469238}

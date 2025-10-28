@@ -9,7 +9,7 @@ public class SetCamera : MonoBehaviour
     [SerializeField] GameObject NormalCar;
     [SerializeField] GameObject RallyCar;
     
-    void Start()
+    void Update()
     {
         if (FormulaCar.activeInHierarchy)
         {
