@@ -1837,7 +1837,7 @@ MonoBehaviour:
   Speed: 1
   RaceCarPrefab: {fileID: 6425666940691086639, guid: 039805499d261cdd1b0616ae25655cc8, type: 3}
   NormalCarPrefab: {fileID: 8146252752357359833, guid: d3f8a41921da302d78126d296e422070, type: 3}
-  MonsterCarPrefab: {fileID: 2869909902135230904, guid: fba598fa178f515e2b0266c0628ce264, type: 3}
+  MonsterCarPrefab: {fileID: 2536183259880108451, guid: 2c35616016264035bab9d5abcfe8c353, type: 3}
   RallyCarPrefab: {fileID: 3262337111873470379, guid: 57a7f08f8a5a13a9c9e714924a02cf24, type: 3}
   ID: 0
   RandomCar: 0

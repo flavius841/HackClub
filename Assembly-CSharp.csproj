@@ -66,6 +66,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/resources/scriptsRace/PreventBugBack.cs" />
+    <Compile Include="Assets/resources/scriptsStartMenu/ChooseCar.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/resources/scriptsRace/car.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
+    <Compile Include="Assets/resources/scriptsRace/CarManagerScript.cs" />
     <Compile Include="Assets/resources/scriptsRace/RotatePlayer.cs" />
     <Compile Include="Assets/resources/scriptsforLoading/LoadTextx.cs" />
     <Compile Include="Assets/resources/scriptsStartMenu/RaceSettings.cs" />
