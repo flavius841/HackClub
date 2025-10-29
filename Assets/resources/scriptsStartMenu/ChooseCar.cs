@@ -8,38 +8,58 @@ public class ChooseCar : MonoBehaviour
     [SerializeField] GameObject RallyCar;
     public static ChooseCar Instance;
     public int SelectedCar;
+    [SerializeField] GameObject ChooseCarButtonPrefab;
+    [SerializeField] GameObject Canvas;
+    [SerializeField] GameObject Camera;
+    private GameObject FormulaCarInstance;
+    private GameObject MonsterTruckInstance;
+    private GameObject NormalCarInstance;
+    private GameObject RallyCarInstance;
     void Awake()
     {
+        GameObject CanvasInstanece = Instantiate(Canvas);
+        GameObject chooseCarButton = Instantiate(ChooseCarButtonPrefab, CanvasInstanece.transform);
+
         // Make this object persistent and create a Singleton
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
         else
         {
             Destroy(gameObject);
         }
+
+        GameObject CameraInstance = Instantiate(Camera);
+
+        FormulaCarInstance = Instantiate(FormulaCar);
+        MonsterTruckInstance = Instantiate(MonsterTruck);
+        NormalCarInstance = Instantiate(NormalCar);
+        RallyCarInstance = Instantiate(RallyCar);
+
+        
     }
 
     public void SelectCar()
     {
-        if (FormulaCar.transform.position.x == 0)
+        if (FormulaCarInstance.transform.position.x == 0)
         {
             SelectedCar = 1;
         }
 
-        else if (MonsterTruck.transform.position.x == 0)
+        else if (MonsterTruckInstance.transform.position.x == 0)
         {
             SelectedCar = 2;
         }
 
-        else if (NormalCar.transform.position.x == 0)
+        else if (NormalCarInstance.transform.position.x == 0)
         {
             SelectedCar = 3;
         }
 
-        else if (RallyCar.transform.position.x == 0)
+        else if (RallyCarInstance.transform.position.x == 0)
         {
             SelectedCar = 4;
         }
