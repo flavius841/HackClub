@@ -473,7 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addac01339f46971e9d521de71e1e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InstatiateScene
-  ChooseCarManagerPrefab: {fileID: 4335133242350313907, guid: 0ad752f99ab469d77acb8a7ff3f86f1e, type: 3}
+  choosecarButton: {fileID: 892423177}
+  chooseCar: {fileID: 551939788}
 --- !u!4 &587950690
 Transform:
   m_ObjectHideFlags: 0
@@ -765,6 +766,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6101245295258242244, guid: be2112783a29eccca85d1f0937a87532, type: 3}
   m_PrefabInstance: {fileID: 892423175}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &892423177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5085976758094302791, guid: be2112783a29eccca85d1f0937a87532, type: 3}
+  m_PrefabInstance: {fileID: 892423175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1041339063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2850989044234747402, guid: 4aa20959dc5095d3c87ecbe003e0b481, type: 3}

@@ -20,7 +20,10 @@ public class ChooseCar : MonoBehaviour
 
         else
         {
-            Destroy(gameObject);
+            Instance.SelectedCar = this.SelectedCar;
+            Destroy(Instance.gameObject); // remove the old one
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
