@@ -884,6 +884,7 @@ MonoBehaviour:
   Speed: 1
   ChangeText: 0
   ChangeTextSpeed: 2
+  LevelToLoad: 2
 --- !u!1001 &1123875116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1316,7 +1317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6425666940691086639, guid: 039805499d261cdd1b0616ae25655cc8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7255189873468303008, guid: 039805499d261cdd1b0616ae25655cc8, type: 3}
       propertyPath: m_LocalScale.x

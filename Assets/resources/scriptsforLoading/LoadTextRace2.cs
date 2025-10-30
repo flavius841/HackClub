@@ -9,6 +9,8 @@ public class LoadTextRace2 : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] float ChangeText;
     [SerializeField] float ChangeTextSpeed;
+    [SerializeField] int LevelToLoad;
+
 
     void Start()
     {
@@ -25,7 +27,14 @@ public class LoadTextRace2 : MonoBehaviour
         
         if (Timer >= 3f)
         {
-            Invoke("LoadLevel1", 0.1f);
+            if (LevelToLoad == 2)
+            {
+                Invoke("LoadLevel2", 0.1f);
+            }
+            else if (LevelToLoad == 3)
+            {
+                Invoke("LoadLevel3", 0.5f);
+            }
         }
 
     }
@@ -47,8 +56,13 @@ public class LoadTextRace2 : MonoBehaviour
         }
     }
 
-    public void LoadLevel1()
+    public void LoadLevel2()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
+
+    public void LoadLevel3()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
     }
 }
