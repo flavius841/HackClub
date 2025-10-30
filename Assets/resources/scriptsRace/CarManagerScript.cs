@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CarManagerScript : MonoBehaviour
 {
-    void Update()
+    void Awake()
     {
         int selectedCar = 3; 
         

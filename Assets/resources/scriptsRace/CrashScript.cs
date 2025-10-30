@@ -12,13 +12,10 @@ public class CrashScript : MonoBehaviour
     [SerializeField] ParticleSystem Blood1;
     [SerializeField] ParticleSystem Blood2;
     [SerializeField] ParticleSystem Blood3;
+    [SerializeField] bool StoopBlood = true;
     void Start()
     {
         surfaceEffector = GetComponent<SurfaceEffector2D>();
-        Blood1.Stop();
-        Blood2.Stop();
-        Blood3.Stop();
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -48,6 +45,14 @@ public class CrashScript : MonoBehaviour
 
     void Update()
     {
+        if (StoopBlood)
+        {
+            Blood1.Stop();
+            Blood2.Stop();
+            Blood3.Stop();
+            StoopBlood = false;
+        }
+        
         if (TouchHead)
         {
             surfaceEffector.speed = 0f;

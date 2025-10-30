@@ -10371,6 +10371,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 1323016524}
   NormalCar: {fileID: 1377830502}
   RallyCar: {fileID: 902497580}
+  Verified: 0
 --- !u!1001 &794370369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13331,6 +13332,7 @@ MonoBehaviour:
   Blood1: {fileID: 1710566308}
   Blood2: {fileID: 1933052602}
   Blood3: {fileID: 609064260}
+  StoopBlood: 1
 --- !u!1 &832984139
 GameObject:
   m_ObjectHideFlags: 0
@@ -19371,6 +19373,7 @@ MonoBehaviour:
   Blood1: {fileID: 1710566308}
   Blood2: {fileID: 1933052602}
   Blood3: {fileID: 609064260}
+  StoopBlood: 1
 --- !u!1 &1211442612
 GameObject:
   m_ObjectHideFlags: 0
@@ -24657,6 +24660,7 @@ MonoBehaviour:
   Blood1: {fileID: 1710566308}
   Blood2: {fileID: 1933052602}
   Blood3: {fileID: 609064260}
+  StoopBlood: 1
 --- !u!1 &1323016524
 GameObject:
   m_ObjectHideFlags: 0
@@ -25740,6 +25744,7 @@ MonoBehaviour:
   Blood1: {fileID: 1710566308}
   Blood2: {fileID: 1933052602}
   Blood3: {fileID: 609064260}
+  StoopBlood: 1
 --- !u!1001 &1693458359
 PrefabInstance:
   m_ObjectHideFlags: 0

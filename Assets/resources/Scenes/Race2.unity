@@ -15556,7 +15556,7 @@ Transform:
   m_GameObject: {fileID: 463882214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16437,6 +16437,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 2077748251}
   NormalCar: {fileID: 1928723599}
   RallyCar: {fileID: 964749773}
+  Verified: 0
 --- !u!114 &581053446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27880,6 +27881,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 4975331}
   NormalCar: {fileID: 1681110146}
   RallyCar: {fileID: 1680035963}
+  Verified: 0
 --- !u!1 &1333999939
 GameObject:
   m_ObjectHideFlags: 0
@@ -38531,6 +38533,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 2077748251}
   NormalCar: {fileID: 1928723599}
   RallyCar: {fileID: 964749773}
+  Verified: 0
 --- !u!252 &1691435367
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
@@ -44499,6 +44502,7 @@ MonoBehaviour:
   MonsterTruck: {fileID: 2077748251}
   NormalCar: {fileID: 1928723599}
   RallyCar: {fileID: 964749773}
+  Verified: 0
 --- !u!252 &1882471647
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
