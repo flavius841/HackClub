@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8664dbda451ac872c8cdc24347bfca13
+guid: ab6d3ee40da24edcebb28eb4c79609ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7462493126830380265
-    second: Arena_Soil_0
+      213: 7722478690510648067
+    second: Snow-Tree-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arena_Soil_0
+      name: Snow-Tree-1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 180
-        height: 180
+        width: 512
+        height: 544
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e4d48bf5f9109760800000000000000
-      internalID: 7462493126830380265
+      spriteID: 303396d1471cb2b60800000000000000
+      internalID: 7722478690510648067
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Arena_Soil_0: 7462493126830380265
+      Snow-Tree-1_0: 7722478690510648067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
