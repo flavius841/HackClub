@@ -343,6 +343,7 @@ MonoBehaviour:
   StartProcess: 0
   newOrthoSize: 0
   Speed: 20
+  SmallSize: 0
 --- !u!1 &110224118
 GameObject:
   m_ObjectHideFlags: 0
@@ -27545,6 +27546,7 @@ MonoBehaviour:
   StartProcess: 0
   newOrthoSize: 0
   Speed: 20
+  SmallSize: 44
 --- !u!1 &684352154
 GameObject:
   m_ObjectHideFlags: 0

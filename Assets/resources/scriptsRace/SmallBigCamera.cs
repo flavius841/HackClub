@@ -8,6 +8,7 @@ public class SmallBigCamera : MonoBehaviour
     [SerializeField] bool StartProcess;
     [SerializeField] float newOrthoSize;
     [SerializeField] float Speed;
+    [SerializeField]  float SmallSize;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,7 +26,7 @@ public class SmallBigCamera : MonoBehaviour
         {
             if (Small)
             {
-                ChangeLens(44f);
+                ChangeLens(SmallSize);
             }
 
             else
