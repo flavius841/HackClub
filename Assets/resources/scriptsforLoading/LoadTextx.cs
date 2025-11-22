@@ -60,6 +60,6 @@ public class LoadTextx : MonoBehaviour
 
     public void LoadLevel1()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }

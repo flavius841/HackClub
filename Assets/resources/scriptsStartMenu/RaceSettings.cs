@@ -12,7 +12,7 @@ public class RaceSettings : MonoBehaviour
 
     public void QuitLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
     public void InvokeQuitLevel()
