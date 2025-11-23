@@ -24,6 +24,7 @@ public class RotateTheWeel : MonoBehaviour
     public Controlingtheplayer Ground1;
     public Controlingtheplayer Ground2;
     public Controlingtheplayer Ground3;
+    public Controlingtheplayer Ground4;
     public ControlingThePlayeInTheMud Mud;
     
     void Update()
@@ -46,7 +47,7 @@ public class RotateTheWeel : MonoBehaviour
             TimerForMud += Time.deltaTime;
         }
 
-        if (Ground1.TouchPlayer || Ground2.TouchPlayer || Ground3.TouchPlayer)
+        if (Ground1.TouchPlayer || Ground2.TouchPlayer || Ground3.TouchPlayer || Ground4.TouchPlayer)
         {
             // Use car velocity to set wheel rotation when grounded
             targetAngularSpeed = (linearSpeed / wheelRadius) * Mathf.Rad2Deg;

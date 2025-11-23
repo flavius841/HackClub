@@ -84,7 +84,6 @@ public class SettingsScript : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(4);
     }
 
-
     public void InvokeLoadeLevel2()
     {
         Invoke("LoadLevel2", 1f);
@@ -92,9 +91,8 @@ public class SettingsScript : MonoBehaviour
 
     public void LoadLevel3()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(6);
     }
-
 
     public void InvokeLoadeLevel3()
     {

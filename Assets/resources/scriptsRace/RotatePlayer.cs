@@ -14,6 +14,8 @@ public class RotatePlayer : MonoBehaviour
     public Controlingtheplayer Ground1;
     public Controlingtheplayer Ground2;
     public Controlingtheplayer Ground3;
+    public Controlingtheplayer Ground4;
+
     public ControlingThePlayeInTheMud Mud;
     public bool TouchMud;
     //[SerializeField] public bool ResetRot;
@@ -82,7 +84,8 @@ public class RotatePlayer : MonoBehaviour
     public void Rotate()
     {
         // if (Input.GetKey(KeyCode.LeftArrow) && Ground1.Rotate1 && Mud.Rotate2)
-        if (Input.GetKey(KeyCode.LeftArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer && !Ground3.TouchPlayer && !Mud.TouchPlayer)
+        if (Input.GetKey(KeyCode.LeftArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer
+         && !Ground3.TouchPlayer && !Ground4.TouchPlayer && !Mud.TouchPlayer)
         {
             
             //transform.Rotate(0, 0, torqueAmount, Space.World);
@@ -90,7 +93,8 @@ public class RotatePlayer : MonoBehaviour
         }
 
         //else if (Input.GetKey(KeyCode.RightArrow) && Ground1.Rotate1 && Mud.Rotate2)
-        else if (Input.GetKey(KeyCode.RightArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer && !Ground3.TouchPlayer && !Mud.TouchPlayer) 
+        else if (Input.GetKey(KeyCode.RightArrow) && !Ground1.TouchPlayer && !Ground2.TouchPlayer
+         && !Ground3.TouchPlayer && !Ground4.TouchPlayer && !Mud.TouchPlayer) 
         {
             
             //transform.Rotate(0, 0, -torqueAmount, Space.World);

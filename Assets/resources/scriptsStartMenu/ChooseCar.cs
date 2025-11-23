@@ -54,7 +54,7 @@ public class ChooseCar : MonoBehaviour
 
     public void LoadStartMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
 
