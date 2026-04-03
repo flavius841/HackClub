@@ -1,8 +1,8 @@
-# HackClub
+# Hill Car Game
 
 ---
 
-**HackClub**  is a car video game built using the **Unity Engine**.
+**Hill Car Game**  is a car video game built using the **Unity Engine**.
 
 ---
 
